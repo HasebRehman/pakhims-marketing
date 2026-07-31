@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import PageLoader from "@/components/ui/PageLoader";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -21,6 +22,14 @@ export const metadata: Metadata = {
   title: "PAKHIMS — The Smarter Way to Run Your Hospital",
   description:
     "PAKHIMS is a complete digital platform for hospital operations, managing OPD, IPD, Blood Bank, Patient History, Billing, Employees, Accounts, and Insurance in one connected system.",
+  icons: {
+    icon: [
+      { url: "/img/favicon.png", type: "image/png" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/img/favicon.png",
+    apple: "/img/favicon.png",
+  },
   keywords: [
     "PAKHIMS",
     "Hospital Management System",
@@ -57,7 +66,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jakarta.variable} ${poppins.variable}`}>
-      <body className="bg-white text-slate-900 antialiased selection:bg-[#CE2433] selection:text-white font-sans">
+      <head>
+        <link rel="icon" href="/img/favicon.png" type="image/png" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/img/favicon.png" />
+        <link rel="apple-touch-icon" href="/img/favicon.png" />
+      </head>
+      <body className="bg-white text-[#0B1528] antialiased selection:bg-[#CE2433] selection:text-white font-sans">
+        <PageLoader />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>

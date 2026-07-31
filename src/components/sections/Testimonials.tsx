@@ -159,7 +159,9 @@ export default function Testimonials() {
                 return (
                   <div
                     key={`${rev.id}-${offset}`}
-                    className="bg-white border border-slate-200/90 p-8 rounded-3xl space-y-5 shadow-sm hover:border-[#224183]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group text-left"
+                    className={`bg-white border border-slate-200/90 p-8 rounded-3xl space-y-5 shadow-sm hover:border-[#224183]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group text-left ${
+                      offset === 1 ? "hidden md:flex" : ""
+                    } ${offset === 2 ? "hidden lg:flex" : ""}`}
                   >
                     <div className="space-y-4">
                       {/* Top Row: Stars & Quote Icon */}

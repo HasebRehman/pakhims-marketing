@@ -23,7 +23,7 @@ export default function FeaturesPage() {
       <Navbar onOpenDemo={handleOpenDemo} />
 
       {/* Features Page Hero Header */}
-      <section className="pt-36 sm:pt-32 pb-12 sm:pb-16 bg-white text-slate-900 border-b border-slate-200/80 text-center">
+      <section className="pt-36 sm:pt-44 md:pt-48 lg:pt-52 pb-12 sm:pb-16 bg-white text-slate-900 border-b border-slate-200/80 text-center">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col items-center">
           <div className="max-w-3xl space-y-4 text-center">
             <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-2">
