@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pakhims-blue: #224183;
+  --color-pakhims-blue-dark: #152A56;
+  --color-pakhims-blue-light: #3A62B3;
+  --color-pakhims-red: #CE2433;
+  --color-pakhims-red-hover: #E32D3D;
+  --color-pakhims-navy: #0B132B;
+  --color-pakhims-dark: #0F172A;
+  --color-pakhims-light: #F8FAFC;
+  --color-pakhims-slate: #475569;
+  --color-pakhims-border: #E2E8F0;
+  
+  --font-jakarta: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  --font-poppins: var(--font-poppins), "Poppins", sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-poppins), var(--font-jakarta), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-jakarta), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Hide Scrollbar globally across all browsers (Chrome, Safari, Firefox, Edge) */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* 3D Perspective Transformations */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Reference Image Deep Offset Shadow (Bottom-Right Dark Shadow) */
+.shadow-reference-offset {
+  box-shadow: 20px 26px 50px -10px rgba(15, 23, 42, 0.45), 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile Phone 3D Tilt Default & Hover Straight Alignment */
+.phone-3d-tilt {
+  transform: rotateX(-6deg) rotateY(12deg) rotateZ(-2deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.phone-3d-tilt:hover {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1.05);
+}
+
+/* Gradient Text Utilities */
+.gradient-text-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #224183 40%, #CE2433 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #0f172a 0%, #224183 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid Patterns & Ambient Lighting */
+.bg-light-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(34, 65, 131, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 65, 131, 0.035) 1px, transparent 1px);
+}
+
+/* Button Glow Pulse */
+.btn-glow-red {
+  box-shadow: 0 10px 25px -5px rgba(206, 36, 51, 0.4), 0 8px 10px -6px rgba(206, 36, 51, 0.2);
+}
+.btn-glow-red:hover {
+  box-shadow: 0 15px 30px -5px rgba(206, 36, 51, 0.55), 0 10px 12px -6px rgba(206, 36, 51, 0.3);
+}
+
+/* Lenis smooth scrolling */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Ensure pointer cursor for all clickable elements */
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.cursor-pointer {
+  cursor: pointer !important;
+}
