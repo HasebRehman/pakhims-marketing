@@ -41,14 +41,14 @@ export default function ProblemSolution() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-slate-900 relative overflow-hidden border-t border-slate-200/80">
+    <section className="py-12 sm:py-28 bg-white text-slate-900 relative overflow-hidden border-t border-slate-200/80">
       {/* Background Ambient Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-50/60 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl pt-14 font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl pt-2 sm:pt-14 font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
             Hospital Management <br />
             <span className="text-[#224183]">Shouldn&apos;t Be Complicated.</span>
           </h2>

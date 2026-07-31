@@ -14,22 +14,11 @@ export default function IpdShowcase() {
   ];
 
   return (
-    <section id="ipd" className="py-20 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
+    <section id="ipd" className="py-12 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Screen Showcase Window with Permanent Heavy Shadow Behind */}
-          <div className="lg:col-span-6 relative shadow-[0_30px_70px_-15px_rgba(34,65,131,0.35)] rounded-2xl border border-slate-200/90 bg-white">
-            <MockBrowserWindow
-              url="app.pakhims.com/ipd/admissions"
-              title="PAKHIMS IPD Ward & Bed Management Engine"
-              badgeText="IPD ACTIVE"
-            >
-              <IpdScreen />
-            </MockBrowserWindow>
-          </div>
-
-          {/* Right Text & Features Column */}
-          <div className="lg:col-span-6 space-y-6 text-left">
+          {/* Right Text & Features Column (Ordered FIRST on mobile, SECOND on desktop) */}
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[44px] font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
               <span className="inline-block whitespace-nowrap">Manage the Complete</span> <br />
               <span className="text-[#224183] inline-block whitespace-nowrap">Admitted Patient Journey.</span>
@@ -63,6 +52,17 @@ export default function IpdShowcase() {
                 );
               })}
             </div>
+          </div>
+
+          {/* Left Screen Showcase Window (Ordered SECOND on mobile, FIRST on desktop) */}
+          <div className="lg:col-span-6 relative shadow-[0_30px_70px_-15px_rgba(34,65,131,0.35)] rounded-2xl border border-slate-200/90 bg-white order-2 lg:order-1">
+            <MockBrowserWindow
+              url="app.pakhims.com/ipd/admissions"
+              title="PAKHIMS IPD Ward & Bed Management Engine"
+              badgeText="IPD ACTIVE"
+            >
+              <IpdScreen />
+            </MockBrowserWindow>
           </div>
         </div>
       </div>

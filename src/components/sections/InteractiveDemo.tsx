@@ -22,7 +22,7 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
   ];
 
   return (
-    <section id="demo" className="py-20 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
+    <section id="demo" className="py-12 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-12">
@@ -66,7 +66,7 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
         </div>
 
         {/* Sleek Tab Button Control Bar (Strictly One Single Line) */}
-        <div className="p-1.5 bg-slate-100/90 border border-slate-200/90 rounded-2xl sm:rounded-full flex items-center justify-center gap-1.5 sm:gap-2 mb-10 sm:mb-12 w-fit max-w-full mx-auto overflow-x-auto no-scrollbar whitespace-nowrap shadow-2xs">
+        <div className="p-1.5 bg-slate-100/90 border border-slate-200/90 rounded-2xl sm:rounded-full flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12 w-fit max-w-full mx-auto overflow-x-auto no-scrollbar whitespace-nowrap shadow-2xs px-3 sm:px-1.5">
           {tabs.map((t) => {
             const Icon = t.icon;
             const isActive = activeTab === t.id;

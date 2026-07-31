@@ -14,22 +14,11 @@ export default function BloodBankShowcase() {
   ];
 
   return (
-    <section id="bloodbank" className="py-20 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
+    <section id="bloodbank" className="py-12 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Screen Showcase Window with Permanent Heavy Shadow Behind */}
-          <div className="lg:col-span-7 relative shadow-[0_30px_70px_-15px_rgba(34,65,131,0.35)] rounded-2xl border border-slate-200/90 bg-white">
-            <MockBrowserWindow
-              url="app.pakhims.com/bloodbank/inventory"
-              title="PAKHIMS Blood Bank Operations & Barcode Generator"
-              badgeText="BLOOD BANK ACTIVE"
-            >
-              <BloodBankScreen />
-            </MockBrowserWindow>
-          </div>
-
-          {/* Right Text Column */}
-          <div className="lg:col-span-5 space-y-6 text-left">
+          {/* Right Text Column (Ordered FIRST on mobile, SECOND on desktop) */}
+          <div className="lg:col-span-5 space-y-6 text-left order-1 lg:order-2">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
               <span className="inline-block whitespace-nowrap">A Smarter Way to Manage</span> <br />
               <span className="text-[#224183] inline-block whitespace-nowrap">Your Hospital Blood Bank.</span>
@@ -63,6 +52,17 @@ export default function BloodBankShowcase() {
                 );
               })}
             </div>
+          </div>
+
+          {/* Left Screen Showcase Window (Ordered SECOND on mobile, FIRST on desktop) */}
+          <div className="lg:col-span-7 relative shadow-[0_30px_70px_-15px_rgba(34,65,131,0.35)] rounded-2xl border border-slate-200/90 bg-white order-2 lg:order-1">
+            <MockBrowserWindow
+              url="app.pakhims.com/bloodbank/inventory"
+              title="PAKHIMS Blood Bank Operations & Barcode Generator"
+              badgeText="BLOOD BANK ACTIVE"
+            >
+              <BloodBankScreen />
+            </MockBrowserWindow>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function EmployeeAccountsInsurance({ hideCards = false, hideAccou
   ];
 
   return (
-    <section id="modules" className="py-20 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
+    <section id="modules" className="py-10 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
       <div className={`max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 ${!hideAccounts && !hideCards ? 'space-y-36 sm:space-y-44 lg:space-y-52' : ''}`}>
         {/* Sub-Section 1: Accounts & Doctor Earnings — hidden on home page when hideAccounts=true */}
         {!hideAccounts && (

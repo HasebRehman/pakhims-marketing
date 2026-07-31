@@ -28,7 +28,7 @@ export default function TargetAudience() {
   ];
 
   return (
-    <section id="target" className="py-20 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
+    <section id="target" className="py-12 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 sm:mb-16">

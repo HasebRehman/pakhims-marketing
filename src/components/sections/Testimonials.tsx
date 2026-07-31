@@ -78,13 +78,13 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="reviews" className="py-20 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
+    <section id="reviews" className="py-12 sm:py-28 bg-white text-slate-900 relative border-t border-slate-200/80">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header with Navigation Arrows */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div className="text-left max-w-3xl space-y-3">
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-2">
-              <span className="inline-block whitespace-nowrap">Trusted By Doctors & Patients</span> <br />
+              <span className="inline-block sm:whitespace-nowrap">Trusted By Doctors & Patients</span> <br />
               <span>Across </span>
               <span className="relative inline-block text-[#224183]">
                 PAKHIMS
