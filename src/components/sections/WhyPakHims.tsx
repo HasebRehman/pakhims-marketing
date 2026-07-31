@@ -1,39 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, Layers, BarChart3, Database, ShieldCheck, Award } from "lucide-react";
+import { Clock, FileX2, DollarSign, Droplets, ShieldAlert, UserCheck } from "lucide-react";
 
 export default function WhyPakHims() {
-  const benefits = [
+  const bottlenecks = [
     {
-      title: "One Connected System",
-      desc: "Eliminate fragmented software tools. Patient records, OPD, IPD, Blood Bank, and Accounts talk to each other automatically.",
-      icon: Layers,
+      bottleneck: "OPD Queue Delays & Paper Tokens",
+      fix: "Digital 1-click token queues & real-time live doctor call screens cut patient wait times by up to 70%.",
+      icon: Clock,
+      tag: "OPD Bottleneck Fixed",
     },
     {
-      title: "Zero Manual Paperwork",
-      desc: "Digital token issuance, electronic prescriptions, and instant invoice receipts reduce administrative delay by up to 70%.",
-      icon: Zap,
+      bottleneck: "Lost Patient Records & Scattered Files",
+      fix: "Unified MRN permanently links all prescriptions, lab reports, and IPD history under 1 searchable patient file.",
+      icon: FileX2,
+      tag: "Record Loss Fixed",
     },
     {
-      title: "100% Financial Visibility",
-      desc: "Know exact revenue split between hospital retention and doctor consultation shares without manual accounting errors.",
-      icon: BarChart3,
+      bottleneck: "Doctor Revenue & Share Disputes",
+      fix: "Automated real-time doctor ledger calculates daily rates, retainers & percentage shares with 0 manual accounting errors.",
+      icon: DollarSign,
+      tag: "Revenue Leakage Fixed",
     },
     {
-      title: "Longitudinal Medical History",
-      desc: "Never lose a patient's treatment story. Every visit, prescription, lab result, and invoice is tied permanently to their MRN.",
-      icon: Database,
+      bottleneck: "Blood Bank Screening & Inventory Risks",
+      fix: "Mandatory 5-marker screening, barcode bag stickers, and automated donor cross-matching ensure 100% safety compliance.",
+      icon: Droplets,
+      tag: "Blood Bank Risk Fixed",
     },
     {
-      title: "Blood Bank Safety & Compliance",
-      desc: "Track blood bags from volunteer collection and 5-marker screening to cross-match verification and barcode bag issuing.",
-      icon: ShieldCheck,
+      bottleneck: "Delayed Panel & Insurance Claims",
+      fix: "Instant insurance panel verification, coverage cap tracking, and 100% panel-compliant auto-invoicing eliminate claim rejections.",
+      icon: ShieldAlert,
+      tag: "Claim Rejection Fixed",
     },
     {
-      title: "Rapid Staff Adoption",
-      desc: "Clean, intuitive user interface designed specifically for hospital staff, requiring minimal training to get started.",
-      icon: Award,
+      bottleneck: "Unauthorized Edits & Security Risks",
+      fix: "Strict Role-Based Access Control (RBAC) ensures staff only see and edit screens relevant to their specific duty.",
+      icon: UserCheck,
+      tag: "Security Risk Fixed",
     },
   ];
 
@@ -77,28 +83,44 @@ export default function WhyPakHims() {
             .
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-sans">
-            PAKHIMS is built to solve real operational bottlenecks faced by healthcare administrators every day.
+            Eliminate operational delays, financial disputes, lost records, and compliance risks across your hospital.
           </p>
         </div>
 
-        {/* Benefits Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {benefits.map((item, idx) => {
+        {/* Bottlenecks & Fixes Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          {bottlenecks.map((item, idx) => {
             const Icon = item.icon;
             return (
               <motion.div
-                key={item.title}
+                key={item.bottleneck}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-white border border-slate-200/90 p-8 rounded-3xl space-y-4 hover:border-[#224183]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group shadow-sm text-left"
+                className="bg-white border border-slate-200/90 p-7 sm:p-8 rounded-3xl space-y-4 hover:border-[#224183]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group shadow-sm text-left flex flex-col justify-between h-full"
               >
-                <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100/80 text-[#CE2433] flex items-center justify-center font-bold shadow-2xs group-hover:bg-[#CE2433] group-hover:text-white transition-colors duration-300">
-                  <Icon className="w-6 h-6" />
+                <div className="space-y-4">
+                  {/* Top Header Icon & Tag Badge */}
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100/80 text-[#CE2433] flex items-center justify-center font-bold shadow-2xs group-hover:bg-[#CE2433] group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-red-50 text-[#CE2433] border border-red-200/80">
+                      {item.tag}
+                    </span>
+                  </div>
+
+                  {/* Bottleneck Title */}
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-heading group-hover:text-[#224183] transition-colors leading-tight">
+                    {item.bottleneck}
+                  </h3>
+
+                  {/* PAKHIMS Solution Fix */}
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                    {item.fix}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 font-heading group-hover:text-[#224183] transition-colors">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">{item.desc}</p>
               </motion.div>
             );
           })}

@@ -144,7 +144,7 @@ export default function ProblemSolution() {
               </h3>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
-                PAKHIMS replaces paper friction with real-time digital sync. Patient records, OPD tokens, doctor consultations, IPD bed vitals, blood bank verification, and automated doctor percentage splits exist in one clean digital environment.
+                PAKHIMS replaces paper friction with real-time digital sync. Online appointments, employee management, insurance panel tracking, doctor accounts, lab diagnostics, OPD token queues, IPD bed vitals, and blood bank verification exist in one clean digital environment.
               </p>
 
               {/* Stats Highlights inside White Boxes */}

@@ -9,7 +9,11 @@ import {
   Droplet,
   FileText,
   DollarSign,
-  Activity
+  Activity,
+  Calendar,
+  UserCheck,
+  ShieldCheck,
+  FlaskConical
 } from "lucide-react";
 
 export default function SignatureEcosystemAnimation() {
@@ -19,37 +23,59 @@ export default function SignatureEcosystemAnimation() {
 
   const modules = [
     {
+      id: "appointment",
+      title: "Online Appointment",
+      desc: "Instant Scheduling & Booking",
+      icon: Calendar,
+      color: "bg-sky-600",
+      initialX: -450,
+      initialY: -220,
+      targetX: -300,
+      targetY: -180,
+    },
+    {
       id: "opd",
       title: "OPD & Token Flow",
       desc: "Instant Queue & Prescriptions",
       icon: Activity,
       color: "bg-blue-600",
-      initialX: -400,
-      initialY: -200,
-      targetX: -265,
-      targetY: -135,
+      initialX: -480,
+      initialY: -70,
+      targetX: -320,
+      targetY: -60,
+    },
+    {
+      id: "lab",
+      title: "Lab & Pathology",
+      desc: "Diagnostic Reports & Tests",
+      icon: FlaskConical,
+      color: "bg-teal-600",
+      initialX: -480,
+      initialY: 70,
+      targetX: -320,
+      targetY: 60,
+    },
+    {
+      id: "employee",
+      title: "Employee Management",
+      desc: "Staff RBAC & Duty Rosters",
+      icon: UserCheck,
+      color: "bg-indigo-600",
+      initialX: -450,
+      initialY: 220,
+      targetX: -300,
+      targetY: 180,
     },
     {
       id: "ipd",
       title: "IPD & Bed Journey",
       desc: "Ward Admissions & Vitals",
       icon: HeartPulse,
-      color: "bg-indigo-600",
-      initialX: 400,
-      initialY: -200,
-      targetX: 265,
-      targetY: -135,
-    },
-    {
-      id: "patient",
-      title: "Patient Identity",
-      desc: "Unified MRN & Records",
-      icon: Users,
-      color: "bg-teal-600",
-      initialX: -440,
-      initialY: 0,
-      targetX: -300,
-      targetY: 0,
+      color: "bg-[#224183]",
+      initialX: 450,
+      initialY: -220,
+      targetX: 300,
+      targetY: -180,
     },
     {
       id: "blood",
@@ -57,21 +83,10 @@ export default function SignatureEcosystemAnimation() {
       desc: "Testing & Bag Verification",
       icon: Droplet,
       color: "bg-[#CE2433]",
-      initialX: 440,
-      initialY: 0,
-      targetX: 300,
-      targetY: 0,
-    },
-    {
-      id: "billing",
-      title: "Invoicing & Billing Engine",
-      desc: "Unified Receipt Ledger",
-      icon: FileText,
-      color: "bg-violet-600",
-      initialX: -400,
-      initialY: 200,
-      targetX: -265,
-      targetY: 135,
+      initialX: 480,
+      initialY: -70,
+      targetX: 320,
+      targetY: -60,
     },
     {
       id: "accounts",
@@ -79,10 +94,21 @@ export default function SignatureEcosystemAnimation() {
       desc: "Automated Percentage Splits",
       icon: DollarSign,
       color: "bg-emerald-600",
-      initialX: 400,
-      initialY: 200,
-      targetX: 265,
-      targetY: 135,
+      initialX: 480,
+      initialY: 70,
+      targetX: 320,
+      targetY: 60,
+    },
+    {
+      id: "insurance",
+      title: "Insurance & Panels",
+      desc: "Policy Verification & Claims",
+      icon: ShieldCheck,
+      color: "bg-purple-600",
+      initialX: 450,
+      initialY: 220,
+      targetX: 300,
+      targetY: 180,
     },
   ];
 
@@ -117,10 +143,9 @@ export default function SignatureEcosystemAnimation() {
 
       cardEls.forEach((card, idx) => {
         const mod = modules[idx];
-        // For middle row (Patient Identity & Blood Bank Operations), push further outward on mobile to avoid overlapping the central box
-        const isMiddleRow = mod.id === "patient" || mod.id === "blood";
+        const isMiddleRow = mod.id === "opd" || mod.id === "lab" || mod.id === "blood" || mod.id === "accounts";
         const mobileTargetX = isMiddleRow ? (mod.targetX < 0 ? -116 : 116) : (mod.targetX < 0 ? -92 : 92);
-        const mobileTargetY = mod.targetY < 0 ? -132 : mod.targetY > 0 ? 132 : 0;
+        const mobileTargetY = mod.targetY * 0.7;
 
         const targetX = isMobile ? mobileTargetX : mod.targetX;
         const targetY = isMobile ? mobileTargetY : mod.targetY;
@@ -190,15 +215,18 @@ export default function SignatureEcosystemAnimation() {
       </div>
 
       {/* Centered Ecosystem Hub Stage */}
-      <div className="relative w-full max-w-5xl h-[420px] sm:h-[520px] flex items-center justify-center mx-auto">
+      <div className="relative w-full max-w-6xl h-[480px] sm:h-[600px] flex items-center justify-center mx-auto">
         {/* Radial Lines SVG */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible">
-          <line x1="50%" y1="50%" x2="20%" y2="25%" stroke="rgba(59, 130, 246, 0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
-          <line x1="50%" y1="50%" x2="80%" y2="25%" stroke="rgba(99, 102, 241, 0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
-          <line x1="50%" y1="50%" x2="15%" y2="50%" stroke="rgba(20, 184, 166, 0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
-          <line x1="50%" y1="50%" x2="85%" y2="50%" stroke="rgba(206, 36, 51, 0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
-          <line x1="50%" y1="50%" x2="20%" y2="75%" stroke="rgba(139, 92, 246, 0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
-          <line x1="50%" y1="50%" x2="80%" y2="75%" stroke="rgba(16, 185, 129, 0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
+          <line x1="50%" y1="50%" x2="18%" y2="18%" stroke="rgba(56, 189, 248, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
+          <line x1="50%" y1="50%" x2="16%" y2="38%" stroke="rgba(59, 130, 246, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
+          <line x1="50%" y1="50%" x2="16%" y2="62%" stroke="rgba(20, 184, 166, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
+          <line x1="50%" y1="50%" x2="18%" y2="82%" stroke="rgba(99, 102, 241, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
+
+          <line x1="50%" y1="50%" x2="82%" y2="18%" stroke="rgba(34, 65, 131, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
+          <line x1="50%" y1="50%" x2="84%" y2="38%" stroke="rgba(206, 36, 51, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
+          <line x1="50%" y1="50%" x2="84%" y2="62%" stroke="rgba(16, 185, 129, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
+          <line x1="50%" y1="50%" x2="82%" y2="82%" stroke="rgba(168, 85, 247, 0.35)" strokeWidth="1.5" strokeDasharray="4 4" />
         </svg>
 
         {/* CENTRAL PAKHIMS PLATFORM CORE BOX */}

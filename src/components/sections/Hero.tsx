@@ -96,7 +96,7 @@ export default function Hero({ onOpenDemo }: HeroProps) {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-sm sm:text-lg lg:text-xl text-slate-600 font-normal leading-relaxed max-w-3xl mx-auto font-sans px-2 sm:px-0"
           >
-            One clean digital platform connecting your entire hospital—streamlining OPD tokens, IPD ward admissions, patient vitals, blood bank verification, doctor share accounts, billing and insurance.
+            One clean digital platform connecting your entire hospital—streamlining Online Appointments, Employee Management, Insurance Panel Tracking, Doctor Accounts, Lab Diagnostics, OPD Token Queues, IPD Ward Care, and Blood Bank Operations.
           </motion.p>
 
           {/* Action CTAs */}

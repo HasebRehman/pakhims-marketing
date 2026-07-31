@@ -12,17 +12,33 @@ import {
   DollarSign,
   ShieldCheck,
   UserCheck,
+  Calendar,
+  FlaskConical,
   ArrowRight
 } from "lucide-react";
 
 export default function ProductEcosystem() {
   const modules = [
     {
+      id: "appointment",
+      title: "Online Appointment",
+      icon: Calendar,
+      desc: "Instant patient scheduling, online booking portals, doctor time slots, and SMS/WhatsApp appointment reminders.",
+      tag: "24/7 Booking",
+    },
+    {
       id: "opd",
-      title: "Patient & OPD Management",
+      title: "OPD & Token Flow",
       icon: Activity,
-      desc: "Instant patient registration, token generation, doctor consultation screen, digital prescriptions & instant OPD invoices.",
+      desc: "Instant patient registration, token generation, doctor consultation screen, digital prescriptions & instant OPD receipts.",
       tag: "Queue Speed: 3x Faster",
+    },
+    {
+      id: "lab",
+      title: "Lab & Pathology",
+      icon: FlaskConical,
+      desc: "Diagnostic test catalog, sample collection tracking, automated lab test reports & printable diagnostic invoices.",
+      tag: "Fast Diagnostics",
     },
     {
       id: "ipd",
@@ -37,13 +53,6 @@ export default function ProductEcosystem() {
       icon: Droplet,
       desc: "Donation collection, 5-marker screening, laboratory cross-matching, verified barcode bag stickers & issuance tracking.",
       tag: "Safety Compliant",
-    },
-    {
-      id: "billing",
-      title: "Invoicing & Billing Engine",
-      icon: FileText,
-      desc: "Automated calculation of OPD, IPD, lab, pharmacy, and blood bank fees into itemized printable receipts and QR invoices.",
-      tag: "Zero Manual Errors",
     },
     {
       id: "accounts",
@@ -61,17 +70,10 @@ export default function ProductEcosystem() {
     },
     {
       id: "employees",
-      title: "Employee & Role Security",
+      title: "Employee Management",
       icon: UserCheck,
       desc: "Role-Based Access Control (RBAC) defining exact permissions for doctors, nurses, accountants, receptionists & admins.",
       tag: "Enterprise RBAC",
-    },
-    {
-      id: "records",
-      title: "Longitudinal Medical History",
-      icon: Users,
-      desc: "Every prescription, lab result, admission history, and billing invoice linked permanently under patient's unique MRN.",
-      tag: "Permanent History",
     },
   ];
 
@@ -91,7 +93,7 @@ export default function ProductEcosystem() {
         </div>
 
         {/* Simple & Clean 8 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {modules.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -101,7 +103,7 @@ export default function ProductEcosystem() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="p-6 sm:p-7 rounded-3xl border border-slate-200/90 bg-white text-slate-800 space-y-4 flex flex-col justify-between group hover:-translate-y-1 hover:border-[#224183] hover:shadow-xl transition-all duration-300"
+                className="p-6 sm:p-7 rounded-3xl border border-slate-200/90 bg-white text-slate-800 flex flex-col justify-start space-y-4 h-full group hover:-translate-y-1 hover:border-[#224183] hover:shadow-xl transition-all duration-300"
               >
                 {/* Header Icon & Tag Badge */}
                 <div className="flex items-center justify-between">
@@ -114,11 +116,11 @@ export default function ProductEcosystem() {
                 </div>
 
                 {/* Title & Description */}
-                <div>
-                  <h3 className="font-bold text-base sm:text-lg text-slate-900 group-hover:text-[#224183] transition-colors font-heading">
+                <div className="space-y-1.5 flex-1 flex flex-col justify-start">
+                  <h3 className="font-bold text-base sm:text-lg text-slate-900 group-hover:text-[#224183] transition-colors font-heading leading-tight min-h-[2.75rem] flex items-center">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5 font-sans">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
                     {item.desc}
                   </p>
                 </div>

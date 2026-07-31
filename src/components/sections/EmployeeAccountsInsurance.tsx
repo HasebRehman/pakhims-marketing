@@ -92,22 +92,22 @@ export default function EmployeeAccountsInsurance({ hideCards = false, hideAccou
             </ul>
           </div>
 
-          {/* Card 2: Insurance Panel Management (Brand Crimson Red #CE2433) */}
+          {/* Card 2: Online Appointment Management (Brand Crimson Red #CE2433) */}
           <div className="bg-[#CE2433] text-white p-8 sm:p-9 rounded-3xl space-y-4 shadow-lg hover:shadow-[0_25px_60px_-15px_rgba(206,36,51,0.55)] hover:-translate-y-2 transition-all duration-300 text-left border border-rose-900/40 group">
             <div className="w-12 h-12 rounded-2xl bg-white/15 border border-white/20 text-white flex items-center justify-center font-bold shadow-xs transition-transform group-hover:scale-110">
-              <ShieldCheck className="w-6 h-6 text-white" />
+              <Calendar className="w-6 h-6 text-white" />
             </div>
             <div className="text-xs font-extrabold uppercase tracking-wider text-rose-200">
-              Panel Management
+              Online Appointment
             </div>
-            <h3 className="text-2xl font-bold text-white font-heading">Make Insurance Management Easier.</h3>
+            <h3 className="text-2xl font-bold text-white font-heading">Make Patient Booking Simpler & Faster.</h3>
             <p className="text-rose-100/90 text-xs sm:text-sm leading-relaxed font-sans">
-              Seamlessly handle panel patients, verify policy coverage status, record pre-approvals, generate panel invoices, and track claim payments.
+              Enable seamless 24/7 online doctor booking, instant time slot allocation, automated SMS/WhatsApp appointment reminders, and zero queue delays.
             </p>
             <ul className="space-y-2 text-xs text-white font-semibold font-sans pt-1">
-              <li className="flex items-center gap-2">✓ Instant insurance panel verification</li>
-              <li className="flex items-center gap-2">✓ Coverage cap & deductible tracking</li>
-              <li className="flex items-center gap-2">✓ Panel-compliant receipt formatting</li>
+              <li className="flex items-center gap-2">✓ 24/7 online doctor booking portal</li>
+              <li className="flex items-center gap-2">✓ Real-time slot availability & reminders</li>
+              <li className="flex items-center gap-2">✓ Direct OPD token queue integration</li>
             </ul>
           </div>
         </div>

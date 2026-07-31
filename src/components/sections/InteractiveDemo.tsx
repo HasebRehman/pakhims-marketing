@@ -2,23 +2,36 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Activity, HeartPulse, Droplet, FileText, DollarSign } from "lucide-react";
+import {
+  Activity,
+  HeartPulse,
+  Droplet,
+  FileText,
+  DollarSign,
+  Calendar,
+  UserCheck,
+  ShieldCheck,
+  FlaskConical
+} from "lucide-react";
 import MockBrowserWindow from "../ui/MockBrowserWindow";
-import { OpdScreen, IpdScreen, BloodBankScreen, BillingInvoiceScreen, AccountsScreen } from "../ui/SoftwareScreens";
 
 interface InteractiveDemoProps {
   onOpenDemo?: () => void;
 }
 
 export default function InteractiveDemo({}: InteractiveDemoProps) {
-  const [activeTab, setActiveTab] = useState<"opd" | "ipd" | "bloodbank" | "billing" | "accounts">("opd");
+  const [activeTab, setActiveTab] = useState<string>("appointment");
 
   const tabs = [
+    { id: "appointment", label: "Online Appointment", icon: Calendar, url: "app.pakhims.com/appointments/online" },
     { id: "opd", label: "OPD & Tokens", icon: Activity, url: "app.pakhims.com/opd/consultation" },
+    { id: "lab", label: "Lab", icon: FlaskConical, url: "app.pakhims.com/lab/diagnostics" },
     { id: "ipd", label: "IPD & Wards", icon: HeartPulse, url: "app.pakhims.com/ipd/beds" },
     { id: "bloodbank", label: "Blood Bank", icon: Droplet, url: "app.pakhims.com/bloodbank/stock" },
     { id: "billing", label: "Billing Engine", icon: FileText, url: "app.pakhims.com/billing/receipts" },
     { id: "accounts", label: "Doctor Accounts", icon: DollarSign, url: "app.pakhims.com/accounts/ledger" },
+    { id: "insurance", label: "Insurance", icon: ShieldCheck, url: "app.pakhims.com/insurance/panels" },
+    { id: "employee", label: "Employee", icon: UserCheck, url: "app.pakhims.com/employee/rbac" },
   ];
 
   return (
@@ -66,21 +79,21 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
         </div>
 
         {/* Sleek Tab Button Control Bar (Strictly One Single Line) */}
-        <div className="p-1.5 bg-slate-100/90 border border-slate-200/90 rounded-2xl sm:rounded-full flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12 w-fit max-w-full mx-auto overflow-x-auto no-scrollbar whitespace-nowrap shadow-2xs px-3 sm:px-1.5">
+        <div className="p-1.5 bg-slate-100/90 border border-slate-200/90 rounded-2xl sm:rounded-full flex items-center justify-start lg:justify-center gap-1 sm:gap-1.5 mb-8 sm:mb-12 w-full max-w-6xl mx-auto overflow-x-auto no-scrollbar whitespace-nowrap shadow-2xs px-2 sm:px-2">
           {tabs.map((t) => {
             const Icon = t.icon;
             const isActive = activeTab === t.id;
             return (
               <button
                 key={t.id}
-                onClick={() => setActiveTab(t.id as any)}
-                className={`px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl sm:rounded-full font-bold text-xs sm:text-sm flex items-center gap-2 transition-all duration-300 relative shrink-0 whitespace-nowrap ${
+                onClick={() => setActiveTab(t.id)}
+                className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl sm:rounded-full font-bold text-[11px] sm:text-xs flex items-center gap-1.5 transition-all duration-300 relative shrink-0 whitespace-nowrap ${
                   isActive
                     ? "bg-[#224183] text-white shadow-md shadow-[#224183]/20"
                     : "bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-50 border border-slate-200/70"
                 }`}
               >
-                <Icon className={`w-4 h-4 transition-colors shrink-0 ${isActive ? "text-[#CE2433]" : "text-slate-500"}`} />
+                <Icon className={`w-3.5 h-3.5 transition-colors shrink-0 ${isActive ? "text-[#CE2433]" : "text-slate-500"}`} />
                 <span className="font-heading whitespace-nowrap">{t.label}</span>
               </button>
             );
@@ -101,10 +114,24 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
                 url={tabs.find((t) => t.id === activeTab)?.url}
                 title={`PAKHIMS — ${tabs.find((t) => t.id === activeTab)?.label} Module`}
               >
+                {activeTab === "appointment" && (
+                  <img
+                    src="/img/opd-img.png"
+                    alt="PAKHIMS Online Doctor Appointment Scheduling"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
                 {activeTab === "opd" && (
                   <img
                     src="/img/opd-img.png"
                     alt="PAKHIMS OPD & Token Management System"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
+                {activeTab === "lab" && (
+                  <img
+                    src="/img/opd-img.png"
+                    alt="PAKHIMS Lab & Diagnostic Test Catalog"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
@@ -133,6 +160,20 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
                   <img
                     src="/img/accounts.png"
                     alt="PAKHIMS Doctor Revenue Accounts & Ledger"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
+                {activeTab === "insurance" && (
+                  <img
+                    src="/img/billing.png"
+                    alt="PAKHIMS Insurance & Panel Claim Verification"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
+                {activeTab === "employee" && (
+                  <img
+                    src="/img/accounts.png"
+                    alt="PAKHIMS Employee RBAC & Role Management"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
