@@ -59,9 +59,12 @@ export default function BloodBankShowcase() {
             <MockBrowserWindow
               url="app.pakhims.com/bloodbank/inventory"
               title="PAKHIMS Blood Bank Operations & Barcode Generator"
-              badgeText="BLOOD BANK ACTIVE"
             >
-              <BloodBankScreen />
+              <img
+                src="/img/blood-bank.png"
+                alt="A Smarter Way to Manage Your Hospital Blood Bank."
+                className="w-full h-auto object-cover rounded-xl shadow-xs"
+              />
             </MockBrowserWindow>
           </div>
         </div>

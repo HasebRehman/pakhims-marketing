@@ -59,9 +59,12 @@ export default function OpdShowcase() {
             <MockBrowserWindow
               url="app.pakhims.com/opd/queue"
               title="PAKHIMS OPD Token & Consultation Station"
-              badgeText="OPD ACTIVE"
             >
-              <OpdScreen />
+              <img
+                src="/img/opd-img.png"
+                alt="Make Every OPD Visit Simpler and Faster."
+                className="w-full h-auto object-cover rounded-xl shadow-xs"
+              />
             </MockBrowserWindow>
           </div>
         </div>

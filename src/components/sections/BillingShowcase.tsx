@@ -58,9 +58,12 @@ export default function BillingShowcase() {
             <MockBrowserWindow
               url="app.pakhims.com/billing/invoice/print"
               title="PAKHIMS Printable Invoice & Invoicing Engine"
-              badgeText="INVOICE GENERATED"
             >
-              <BillingInvoiceScreen />
+              <img
+                src="/img/billing.png"
+                alt="Billing That Works With Your Hospital Workflow."
+                className="w-full h-auto object-cover rounded-xl shadow-xs"
+              />
             </MockBrowserWindow>
           </div>
         </div>

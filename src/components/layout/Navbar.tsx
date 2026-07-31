@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 
@@ -13,6 +14,7 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("hero");
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "Overview", href: "/#hero", id: "hero" },
@@ -21,6 +23,7 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
     { name: "Modules", href: "/#modules", id: "modules" },
     { name: "Interactive Demo", href: "/#demo", id: "demo" },
     { name: "Why PAKHIMS", href: "/#why-pakhims", id: "why-pakhims" },
+    { name: "Pricing", href: "/pricing", id: "pricing" },
   ];
 
   const sectionToNavMap: Record<string, string> = {
@@ -34,11 +37,21 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
     ipd: "modules",
     billing: "modules",
     bloodbank: "modules",
+    pricing: "pricing",
     "why-pakhims": "why-pakhims",
     demo: "demo",
   };
 
   useEffect(() => {
+    if (pathname === "/pricing") {
+      setActiveSection("pricing");
+      return;
+    }
+    if (pathname === "/features") {
+      setActiveSection("modules");
+      return;
+    }
+
     // Read initial hash if present
     if (typeof window !== "undefined" && window.location.hash) {
       const hash = window.location.hash.replace("#", "");

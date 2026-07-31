@@ -59,9 +59,12 @@ export default function IpdShowcase() {
             <MockBrowserWindow
               url="app.pakhims.com/ipd/admissions"
               title="PAKHIMS IPD Ward & Bed Management Engine"
-              badgeText="IPD ACTIVE"
             >
-              <IpdScreen />
+              <img
+                src="/img/ipd.png"
+                alt="Manage the Complete Admitted Patient Journey."
+                className="w-full h-auto object-cover rounded-xl shadow-xs"
+              />
             </MockBrowserWindow>
           </div>
         </div>

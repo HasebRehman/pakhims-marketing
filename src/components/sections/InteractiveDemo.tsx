@@ -100,13 +100,42 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
               <MockBrowserWindow
                 url={tabs.find((t) => t.id === activeTab)?.url}
                 title={`PAKHIMS — ${tabs.find((t) => t.id === activeTab)?.label} Module`}
-                badgeText="INTERACTIVE PREVIEW"
               >
-                {activeTab === "opd" && <OpdScreen />}
-                {activeTab === "ipd" && <IpdScreen />}
-                {activeTab === "bloodbank" && <BloodBankScreen />}
-                {activeTab === "billing" && <BillingInvoiceScreen />}
-                {activeTab === "accounts" && <AccountsScreen />}
+                {activeTab === "opd" && (
+                  <img
+                    src="/img/opd-img.png"
+                    alt="PAKHIMS OPD & Token Management System"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
+                {activeTab === "ipd" && (
+                  <img
+                    src="/img/ipd.png"
+                    alt="PAKHIMS IPD Ward & Bed Care Management"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
+                {activeTab === "bloodbank" && (
+                  <img
+                    src="/img/blood-bank.png"
+                    alt="PAKHIMS Blood Bank Operations"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
+                {activeTab === "billing" && (
+                  <img
+                    src="/img/billing.png"
+                    alt="PAKHIMS Central Billing Engine"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
+                {activeTab === "accounts" && (
+                  <img
+                    src="/img/accounts.png"
+                    alt="PAKHIMS Doctor Revenue Accounts & Ledger"
+                    className="w-full h-auto object-cover rounded-xl shadow-xs"
+                  />
+                )}
               </MockBrowserWindow>
             </motion.div>
           </AnimatePresence>

@@ -63,8 +63,9 @@ export default function Footer({ onOpenDemo }: FooterProps) {
                 { name: "Overview", href: "/#hero" },
                 { name: "Signature Core", href: "/#signature" },
                 { name: "Detailed Features", href: "/features" },
-                { name: "Why PAKHIMS", href: "/#why-pakhims" },
                 { name: "Interactive Demo", href: "/#demo" },
+                { name: "Why PAKHIMS", href: "/#why-pakhims" },
+                { name: "Pricing", href: "/pricing" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link

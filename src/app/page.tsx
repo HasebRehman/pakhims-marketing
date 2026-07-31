@@ -16,6 +16,7 @@ import EmployeeAccountsInsurance from "@/components/sections/EmployeeAccountsIns
 import InteractiveDemo from "@/components/sections/InteractiveDemo";
 import WhyPakHims from "@/components/sections/WhyPakHims";
 import TargetAudience from "@/components/sections/TargetAudience";
+import PricingBanner from "@/components/sections/PricingBanner";
 import Testimonials from "@/components/sections/Testimonials";
 import Footer from "@/components/layout/Footer";
 import DemoModal from "@/components/ui/DemoModal";
@@ -58,6 +59,9 @@ export default function Home() {
 
       {/* Target Buyer Persona */}
       <TargetAudience />
+
+      {/* Pricing Highlight Banner */}
+      <PricingBanner onOpenDemo={handleOpenDemo} />
 
       {/* Verified Customer Reviews & Testimonials */}
       <Testimonials />

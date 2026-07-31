@@ -10,6 +10,7 @@ interface MockBrowserWindowProps {
   className?: string;
   badgeText?: string;
   showDepth?: boolean;
+  showServerStatus?: boolean;
 }
 
 export default function MockBrowserWindow({
@@ -17,8 +18,9 @@ export default function MockBrowserWindow({
   url = "app.pakhims.com/dashboard/opd",
   title = "PAKHIMS Hospital Management System",
   className = "",
-  badgeText = "LIVE SYSTEM",
+  badgeText,
   showDepth = true,
+  showServerStatus = false,
 }: MockBrowserWindowProps) {
   return (
     <div
@@ -46,12 +48,14 @@ export default function MockBrowserWindow({
         </div>
 
         {/* Status Badge */}
-        <div className="hidden sm:flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#224183]/10 text-[#224183] border border-[#224183]/20">
-            <CheckCircle className="w-3 h-3 text-[#CE2433]" />
-            {badgeText}
-          </span>
-        </div>
+        {badgeText && (
+          <div className="hidden sm:flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#224183]/10 text-[#224183] border border-[#224183]/20">
+              <CheckCircle className="w-3 h-3 text-[#CE2433]" />
+              {badgeText}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Screen Title Sub-bar */}
@@ -60,13 +64,15 @@ export default function MockBrowserWindow({
           <Layers className="w-3.5 h-3.5 text-[#CE2433]" />
           <span>{title}</span>
         </div>
-        <div className="flex items-center gap-3 text-[11px] text-slate-500">
-          <span className="flex items-center gap-1.5 font-medium">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            Hospital Server: Connected
-          </span>
-          <span className="hidden md:inline font-mono">ID: PAK-HOSP-094</span>
-        </div>
+        {showServerStatus && (
+          <div className="flex items-center gap-3 text-[11px] text-slate-500">
+            <span className="flex items-center gap-1.5 font-medium">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Hospital Server: Connected
+            </span>
+            <span className="hidden md:inline font-mono">ID: PAK-HOSP-094</span>
+          </div>
+        )}
       </div>
 
       {/* Main Screen Container */}

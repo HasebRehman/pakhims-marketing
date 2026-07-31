@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles, ArrowRight, Play, ShieldCheck, Zap, Droplet } from "lucide-react";
 import gsap from "gsap";
 import MockBrowserWindow from "../ui/MockBrowserWindow";
 import Mock3dPhone from "../ui/Mock3dPhone";
-import { OpdScreen } from "../ui/SoftwareScreens";
+import { DesktopProfileShowcase } from "../ui/PakhimsProfileShowcase";
 
 interface HeroProps {
   onOpenDemo?: () => void;
@@ -17,6 +17,7 @@ export default function Hero({ onOpenDemo }: HeroProps) {
   const card1Ref = useRef<HTMLDivElement>(null);
   const card2Ref = useRef<HTMLDivElement>(null);
   const card3Ref = useRef<HTMLDivElement>(null);
+  const [laptopHovered, setLaptopHovered] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -179,13 +180,24 @@ export default function Hero({ onOpenDemo }: HeroProps) {
           className="mt-10 sm:mt-18 relative max-w-5xl mx-auto"
         >
           {/* Main Desktop Software Frame */}
-          <div className="rounded-2xl border border-slate-200 bg-white shadow-reference-offset overflow-hidden">
+          <div
+            className="rounded-2xl border border-slate-200 bg-white shadow-reference-offset overflow-hidden relative group/laptop cursor-pointer"
+            onMouseEnter={() => setLaptopHovered(true)}
+            onMouseLeave={() => setLaptopHovered(false)}
+          >
             <MockBrowserWindow
-              url="app.pakhims.com/opd/consultation"
-              title="PAKHIMS Out-Patient & In-Patient Core Suite"
-              badgeText="LIVE DEMO PREVIEW"
+              url="https://profile.pakhims.com/"
+              title="PAKHIMS — Official Profile Website Showcase"
             >
-              <OpdScreen />
+              <div className="w-full h-[460px] sm:h-[540px] overflow-hidden relative bg-white">
+                <div
+                  className={`w-full relative transition-transform duration-[8000ms] ease-in-out ${
+                    laptopHovered ? "-translate-y-[62%]" : "translate-y-0"
+                  }`}
+                >
+                  <DesktopProfileShowcase />
+                </div>
+              </div>
             </MockBrowserWindow>
           </div>
 

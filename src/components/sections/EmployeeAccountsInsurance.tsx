@@ -59,9 +59,12 @@ export default function EmployeeAccountsInsurance({ hideCards = false, hideAccou
             <MockBrowserWindow
               url="app.pakhims.com/accounts/doctor-ledger"
               title="PAKHIMS Doctor Share Ledger & Revenue Allocation"
-              badgeText="ACCOUNTS AUDITED"
             >
-              <AccountsScreen />
+              <img
+                src="/img/accounts.png"
+                alt="Know Where Every Number Comes From."
+                className="w-full h-auto object-cover rounded-xl shadow-xs"
+              />
             </MockBrowserWindow>
           </div>
         </div>
