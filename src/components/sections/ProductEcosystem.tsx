@@ -23,14 +23,14 @@ export default function ProductEcosystem() {
       id: "appointment",
       title: "Online Appointment",
       icon: Calendar,
-      desc: "Instant patient scheduling, online booking portals, doctor time slots, and SMS/WhatsApp appointment reminders.",
+      desc: "Instant patient scheduling, online booking portals, and doctor time slot management.",
       tag: "24/7 Booking",
     },
     {
       id: "opd",
       title: "OPD & Token Flow",
       icon: Activity,
-      desc: "Instant patient registration, token generation, doctor consultation screen, digital prescriptions & instant OPD receipts.",
+      desc: "Instant patient registration, token generation, in-person doctor consultation, digital prescriptions & instant OPD receipts.",
       tag: "Queue Speed: 3x Faster",
     },
     {
@@ -133,6 +133,7 @@ export default function ProductEcosystem() {
         <div className="mt-14 sm:mt-16 text-center">
           <Link
             href="/features"
+            scroll={true}
             className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#CE2433] hover:bg-[#E32D3D] text-white text-sm sm:text-base font-bold rounded-full shadow-lg shadow-red-600/20 hover:shadow-xl hover:scale-105 transition-all duration-300 group"
           >
             <span>Explore All Detailed Features</span>

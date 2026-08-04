@@ -65,11 +65,7 @@ export default function Hero({ onOpenDemo }: HeroProps) {
           className="flex justify-center mb-5 sm:mb-6"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 shadow-2xs">
-            <span className="flex h-2.5 w-2.5 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span className="font-bold text-[#224183] flex items-center gap-1 text-[11px] sm:text-xs">
+            <span className="font-bold text-[#224183] flex items-center gap-1.5 text-[11px] sm:text-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#CE2433]" />
               FULLY FUNCTIONAL HOSPITAL PLATFORM
             </span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -12,25 +12,29 @@ export default function PricingPage() {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
   const handleOpenDemo = () => setDemoModalOpen(true);
   const handleCloseDemo = () => setDemoModalOpen(false);
 
   const faqs = [
     {
       q: "How does the 5,000 PKR / month pricing structure work?",
-      a: "PAKHIMS offers a single all-inclusive monthly subscription of 5,000 PKR / month. There are zero hidden setup fees, zero per-user charges, and zero per-patient costs. Every subscription includes full access to OPD, IPD, Blood Bank, Patient History, Accounts, and Billing modules.",
+      a: "PAKHIMS offers a transparent subscription of 5,000 PKR / month. There are zero hidden setup fees, zero per-user charges, and zero per-patient costs. Every subscription includes full access to OPD, IPD, Patient History (MRN), Doctor Accounts, and Billing modules.",
     },
     {
-      q: "How does the 5,000 PKR discount on the 6-Month Package work?",
-      a: "The standard monthly rate for PAKHIMS is 5,000 PKR / month. When you subscribe to the 6-Month Semi-Annual Package (normally 30,000 PKR), we automatically apply an instant 5,000 PKR discount, making your total only 25,000 PKR for 6 full months (~4,166 PKR/mo). That effectively gives your hospital 1 month completely FREE!",
+      q: "How does the 6-Month Semi-Annual Package work?",
+      a: "The 6-Month Semi-Annual Package is priced at 30,000 PKR for 6 full months of operation (5,000 PKR / month). It includes complete system setup, doctor share ledger configuration, and full staff onboarding.",
     },
     {
       q: "Are there any hidden installation, database, or server maintenance fees?",
       a: "No! We believe in 100% transparent pricing. Your monthly fee covers cloud server hosting, automated daily backups, feature updates, and 24/7 technical support without any surprise fees.",
     },
     {
-      q: "What core hospital modules are included in PAKHIMS?",
-      a: "Every subscription includes our complete hospital suite: Out-Patient Department (OPD) live token queues & Rx builder, In-Patient Department (IPD) ward bed care manager, Permanent Medical Record Number (MRN) patient history, Blood Bank 5-marker pathogen screening & barcode printing, Doctor percentage share calculator, and Itemized Billing receipts.",
+      q: "What core hospital modules are included in PAKHIMS standard packages?",
+      a: "Standard packages include our core hospital suite: Out-Patient Department (OPD) live token queues & Rx builder, In-Patient Department (IPD) ward bed care manager, Permanent Medical Record Number (MRN) patient history, Doctor percentage share calculator, and Itemized Billing receipts.",
     },
     {
       q: "How does the Doctor Percentage Share & Revenue Allocation engine work?",
@@ -97,7 +101,7 @@ export default function PricingPage() {
               <span className="text-slate-900">& Packages.</span>
             </h1>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-sans mx-auto">
-              Straightforward pricing tailored for Pakistani hospitals. Save 5,000 PKR instantly with our 6-month semi-annual plan.
+              Straightforward pricing for Pakistani hospitals. Includes a <strong>1-Month Free Trial</strong> and custom module options — pay only for the specific modules you need!
             </p>
           </div>
         </div>
@@ -186,6 +190,9 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      {/* Spacing Gap Before Footer */}
+      <div className="py-10 sm:py-16 bg-slate-50 border-t border-slate-200/80" />
 
       {/* Footer */}
       <Footer onOpenDemo={handleOpenDemo} />

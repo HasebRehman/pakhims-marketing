@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -31,6 +31,10 @@ import {
 export default function FeaturesPage() {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
   const handleOpenDemo = () => setDemoModalOpen(true);
   const handleCloseDemo = () => setDemoModalOpen(false);
 
@@ -38,45 +42,45 @@ export default function FeaturesPage() {
     // 1. Appointment (Desktop: Image LEFT, Content RIGHT)
     {
       id: "appointment",
-      tag: "ONLINE APPOINTMENT MODULE",
+      tag: "ONLINE APPOINTMENT",
       tagColor: "bg-sky-600 text-white font-bold shadow-xs border-0",
       heading: "Smart 24/7 Patient Booking & Scheduling.",
       description: "Provide your patients with a seamless online appointment booking experience while keeping your OPD schedule perfectly organized.",
-      image: "/img/opd-img.png",
+      image: "/img/dashboards/apni-appointment-dashboard.png",
       url: "app.pakhims.com/appointments/online",
       browserTitle: "PAKHIMS Online Doctor Appointment Portal",
       highlights: [
-        { title: "24/7 Online Booking Portal", desc: "Patients can search doctors by specialty, view open time slots, and book appointments anytime.", icon: Calendar },
+        { title: "24/7 Booking via Apni Appointment", desc: "Patients can search doctors and book appointments 24/7 through the Apni Appointment website or mobile app, fully synced with PAKHIMS.", icon: Calendar },
         { title: "Real-Time Slot Allocation", desc: "Prevents double-booking by locking time slots instantly across hospital reception and online portals.", icon: Clock },
-        { title: "Automated Reminders", desc: "Sends instant SMS and WhatsApp confirmation messages and appointment reminders to patients.", icon: MessageSquare },
-        { title: "Direct OPD Queue Sync", desc: "Confirmed appointments automatically appear on doctor consultation screens and OPD token counters.", icon: CheckCircle2 },
+        { title: "Instant Confirmations", desc: "Sends instant confirmation details and appointment slot information directly to patients.", icon: MessageSquare },
+        { title: "Direct OPD Queue Sync", desc: "Confirmed appointments automatically sync directly with hospital OPD token counters.", icon: CheckCircle2 },
       ],
     },
     // 2. Employee (Desktop: Content LEFT, Image RIGHT)
     {
       id: "employee",
-      tag: "EMPLOYEE & SECURITY MODULE",
+      tag: "EMPLOYEE & SECURITY",
       tagColor: "bg-indigo-600 text-white font-bold shadow-xs border-0",
       heading: "Keep Your Hospital Team Organized & Secure.",
       description: "Add staff members, assign Role-Based Access Control (RBAC), and define exact screen permissions for doctors, nurses, accountants, receptionists, and administrators.",
-      image: "/img/accounts.png",
+      image: "/img/dashboards/employee-dashboard.png",
       url: "app.pakhims.com/employee/rbac",
       browserTitle: "PAKHIMS Staff Security & Role Management",
       highlights: [
         { title: "Strict Role-Based Access", desc: "Define granular screen-level read/write access for every staff member across departments.", icon: Lock },
         { title: "Staff Activity Audit Logs", desc: "Track every login, patient record edit, prescription update, and financial transaction timestamp.", icon: FileCheck },
-        { title: "Shift & Duty Roster", desc: "Organize doctor and nursing shift schedules with automated duty rosters and attendance logs.", icon: Calendar },
-        { title: "Multi-Department Security", desc: "Ensure receptionists, nurses, and accountants only access data relevant to their duty.", icon: UserCheck },
+        { title: "User & Role Management", desc: "Easily add staff members and assign customizable system roles with specific administrative privileges.", icon: UserCheck },
+        { title: "Multi-Department Security", desc: "Ensure receptionists, nurses, and accountants only access data relevant to their duty.", icon: ShieldCheck },
       ],
     },
     // 3. Insurance (Desktop: Image LEFT, Content RIGHT)
     {
       id: "insurance",
-      tag: "INSURANCE & PANELS MODULE",
+      tag: "INSURANCE & PANELS",
       tagColor: "bg-rose-600 text-white font-bold shadow-xs border-0",
       heading: "Make Insurance & Panel Claims Effortless.",
       description: "Seamlessly handle panel patients, verify policy coverage status, record pre-approvals, generate panel invoices, and track claim payments.",
-      image: "/img/billing.png",
+      image: "/img/dashboards/insurance-dashboard.png",
       url: "app.pakhims.com/insurance/panels",
       browserTitle: "PAKHIMS Insurance & Panel Claim Verification",
       highlights: [
@@ -89,11 +93,11 @@ export default function FeaturesPage() {
     // 4. Accounts (Desktop: Content LEFT, Image RIGHT)
     {
       id: "accounts",
-      tag: "DOCTOR ACCOUNTS MODULE",
+      tag: "DOCTOR ACCOUNTS",
       tagColor: "bg-emerald-600 text-white font-bold shadow-xs border-0",
       heading: "Know Where Every Number Comes From.",
       description: "Eliminate revenue disputes between hospital owners and consultant doctors. PAKHIMS automatically calculates earnings based on your specific doctor agreements.",
-      image: "/img/accounts.png",
+      image: "/img/dashboards/accounts-dashboard.png",
       url: "app.pakhims.com/accounts/doctor-ledger",
       browserTitle: "PAKHIMS Doctor Share Ledger & Revenue Allocation",
       highlights: [
@@ -106,33 +110,33 @@ export default function FeaturesPage() {
     // 5. Lab (Desktop: Image LEFT, Content RIGHT)
     {
       id: "lab",
-      tag: "LAB & PATHOLOGY MODULE",
+      tag: "LAB & PATHOLOGY",
       tagColor: "bg-teal-600 text-white font-bold shadow-xs border-0",
       heading: "Fast, Error-Free Diagnostic & Lab Operations.",
       description: "Streamline pathology test ordering, sample barcode tracking, result entry, and report printing in your hospital laboratory.",
-      image: "/img/opd-img.png",
+      image: "/img/dashboards/lab-dashboard.png",
       url: "app.pakhims.com/lab/diagnostics",
       browserTitle: "PAKHIMS Laboratory Diagnostics & Pathology Engine",
       highlights: [
         { title: "Diagnostic Test Catalog", desc: "Pre-configured pathology test rates, normal range values, and reference parameters.", icon: FlaskConical },
         { title: "Sample Barcode Tracking", desc: "Generates unique barcode labels for blood and tissue vials to prevent sample mix-ups.", icon: Barcode },
-        { title: "Automated Report Printing", desc: "Pathologist verification screen with instant printable PDF reports and WhatsApp delivery.", icon: FileText },
-        { title: "Billing & MRN Integration", desc: "Direct integration with central billing engine so test fees automatically post to patient receipts.", icon: CheckCircle2 },
+        { title: "Automated Report Printing", desc: "Pathologist verification screen with instant printable PDF reports.", icon: FileText },
+        { title: "Dedicated Lab Billing & MRN", desc: "Dedicated lab billing engine with instant diagnostic receipts linked directly under patient MRN.", icon: CheckCircle2 },
       ],
     },
     // 6. OPD (Desktop: Content LEFT, Image RIGHT)
     {
       id: "opd",
-      tag: "OPD & TOKEN MODULE",
+      tag: "OPD & TOKENS",
       tagColor: "bg-blue-600 text-white font-bold shadow-xs border-0",
       heading: "Make Every OPD Visit Simpler and Faster.",
       description: "From initial token generation at reception to digital doctor prescription entry and checkout billing, handle high-volume patient queues with zero friction.",
-      image: "/img/opd-img.png",
+      image: "/img/dashboards/opd-dashboard.png",
       url: "app.pakhims.com/opd/queue",
       browserTitle: "PAKHIMS OPD Token & Consultation Station",
       highlights: [
         { title: "1-Click Token Issuance", desc: "Receptionists issue sequential tokens tied to specific doctor clinics in seconds.", icon: Activity },
-        { title: "Live Consultation Screen", desc: "Doctors view waiting queue, vitals, medical history, and enter digital prescriptions.", icon: Clock },
+        { title: "OPD Queue & Vitals Workflow", desc: "Doctors view waiting queue, vitals, medical history, and enter digital prescriptions during in-person patient check-ups.", icon: Clock },
         { title: "Electronic Prescriptions", desc: "Fast drug dosage selection with pre-filled templates and printable RX slips.", icon: FileText },
         { title: "Instant OPD Checkout", desc: "Auto-calculates consultation and procedure fees at checkout with 0 manual typing.", icon: CheckCircle2 },
       ],
@@ -140,11 +144,11 @@ export default function FeaturesPage() {
     // 7. IPD (Desktop: Image LEFT, Content RIGHT)
     {
       id: "ipd",
-      tag: "IPD & WARD MODULE",
+      tag: "IPD & WARDS",
       tagColor: "bg-purple-600 text-white font-bold shadow-xs border-0",
       heading: "Manage the Complete Admitted Patient Journey.",
       description: "Track admitted patients from ward bed assignment, daily nursing care logs, surgery records, doctor round notes to final discharge summaries.",
-      image: "/img/ipd.png",
+      image: "/img/dashboards/ipd-dashboard.png",
       url: "app.pakhims.com/ipd/admissions",
       browserTitle: "PAKHIMS IPD Ward & Bed Management Engine",
       highlights: [
@@ -157,11 +161,11 @@ export default function FeaturesPage() {
     // 8. Blood Bank (Desktop: Content LEFT, Image RIGHT)
     {
       id: "bloodbank",
-      tag: "BLOOD BANK MODULE",
+      tag: "BLOOD BANK",
       tagColor: "bg-[#CE2433] text-white font-bold shadow-xs border-0",
       heading: "A Smarter Way to Manage Your Hospital Blood Bank.",
       description: "Track blood bags from volunteer collection, 5-marker laboratory screening, cross-matching, barcode sticker generation to emergency issuance.",
-      image: "/img/blood-bank.png",
+      image: "/img/dashboards/blood-bank-dashboard.png",
       url: "app.pakhims.com/bloodbank/inventory",
       browserTitle: "PAKHIMS Blood Bank Operations & Barcode Generator",
       highlights: [
@@ -288,7 +292,7 @@ export default function FeaturesPage() {
                     isImageLeftOnDesktop ? "lg:order-1" : "lg:order-2"
                   }`}
                 >
-                  <MockBrowserWindow url={mod.url} title={mod.browserTitle}>
+                  <MockBrowserWindow showAddressBar={false} title={mod.browserTitle}>
                     <img
                       src={mod.image}
                       alt={mod.heading}
@@ -302,6 +306,9 @@ export default function FeaturesPage() {
           </section>
         );
       })}
+
+      {/* Spacing Gap Before Footer */}
+      <div className="py-10 sm:py-16 bg-white border-t border-slate-200/80" />
 
       {/* Footer */}
       <Footer onOpenDemo={handleOpenDemo} />

@@ -8,8 +8,8 @@ export default function AppointmentShowcase() {
   const appointmentSteps = [
     {
       id: "portal",
-      name: "24/7 Online Booking Portal",
-      desc: "Patients can search doctors by specialty, view open time slots, and book appointments anytime.",
+      name: "24/7 Booking via Apni Appointment",
+      desc: "Patients can search doctors and book appointments 24/7 through the Apni Appointment website or mobile app, fully synced with PAKHIMS.",
       icon: Calendar,
     },
     {
@@ -20,14 +20,14 @@ export default function AppointmentShowcase() {
     },
     {
       id: "reminders",
-      name: "Automated Reminders",
-      desc: "Sends instant SMS and WhatsApp confirmation messages and appointment reminders to patients.",
+      name: "Instant Confirmations",
+      desc: "Sends instant confirmation details and appointment slot information directly to patients.",
       icon: MessageSquare,
     },
     {
       id: "sync",
       name: "Direct OPD Queue Sync",
-      desc: "Confirmed appointments automatically appear on doctor consultation screens and OPD token counters.",
+      desc: "Confirmed appointments automatically sync directly with hospital OPD token counters.",
       icon: CheckCircle2,
     },
   ];

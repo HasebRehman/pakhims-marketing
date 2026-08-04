@@ -11,6 +11,7 @@ interface MockBrowserWindowProps {
   badgeText?: string;
   showDepth?: boolean;
   showServerStatus?: boolean;
+  showAddressBar?: boolean;
 }
 
 export default function MockBrowserWindow({
@@ -21,6 +22,7 @@ export default function MockBrowserWindow({
   badgeText,
   showDepth = true,
   showServerStatus = false,
+  showAddressBar = true,
 }: MockBrowserWindowProps) {
   return (
     <div
@@ -38,14 +40,16 @@ export default function MockBrowserWindow({
         </div>
 
         {/* Address Bar */}
-        <div className="flex-1 max-w-xl bg-white border border-slate-200 rounded-lg px-3 py-1 flex items-center justify-between text-xs text-slate-500 shadow-xs">
-          <div className="flex items-center gap-2 truncate">
-            <Lock className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-            <span className="text-emerald-600 font-semibold">https://</span>
-            <span className="text-slate-800 font-medium truncate">{url}</span>
+        {showAddressBar && (
+          <div className="flex-1 max-w-xl bg-white border border-slate-200 rounded-lg px-3 py-1 flex items-center justify-between text-xs text-slate-500 shadow-xs">
+            <div className="flex items-center gap-2 truncate">
+              <Lock className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span className="text-emerald-600 font-semibold">https://</span>
+              <span className="text-slate-800 font-medium truncate">{url}</span>
+            </div>
+            <RefreshCw className="w-3 h-3 text-slate-400 shrink-0" />
           </div>
-          <RefreshCw className="w-3 h-3 text-slate-400 shrink-0" />
-        </div>
+        )}
 
         {/* Status Badge */}
         {badgeText && (

@@ -410,7 +410,7 @@ export function BillingInvoiceScreen() {
 
         {/* Invoice Subtotal */}
         <div className="flex justify-between items-center border-t pt-3 font-mono">
-          <span className="text-xs text-slate-500 font-sans">System Generated QR Invoice</span>
+          <span className="text-xs text-slate-500 font-sans">System Generated Invoice</span>
           <div className="text-right">
             <span className="text-xs text-slate-600 block">TOTAL AMOUNT:</span>
             <span className="text-lg font-black text-[#224183]">PKR 5,000</span>

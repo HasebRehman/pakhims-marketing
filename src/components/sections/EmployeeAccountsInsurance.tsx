@@ -102,11 +102,11 @@ export default function EmployeeAccountsInsurance({ hideCards = false, hideAccou
             </div>
             <h3 className="text-2xl font-bold text-white font-heading">Make Patient Booking Simpler & Faster.</h3>
             <p className="text-rose-100/90 text-xs sm:text-sm leading-relaxed font-sans">
-              Enable seamless 24/7 online doctor booking, instant time slot allocation, automated SMS/WhatsApp appointment reminders, and zero queue delays.
+              Patients can easily book doctor appointments 24/7 through the <strong className="text-white">Apni Appointment</strong> website or mobile app, which syncs seamlessly in real-time with PAKHIMS.
             </p>
             <ul className="space-y-2 text-xs text-white font-semibold font-sans pt-1">
-              <li className="flex items-center gap-2">✓ 24/7 online doctor booking portal</li>
-              <li className="flex items-center gap-2">✓ Real-time slot availability & reminders</li>
+              <li className="flex items-center gap-2">✓ 24/7 booking via Apni Appointment website & mobile app</li>
+              <li className="flex items-center gap-2">✓ Real-time 2-way sync directly with PAKHIMS</li>
               <li className="flex items-center gap-2">✓ Direct OPD token queue integration</li>
             </ul>
           </div>

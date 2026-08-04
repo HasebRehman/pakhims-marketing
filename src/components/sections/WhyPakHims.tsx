@@ -7,7 +7,7 @@ export default function WhyPakHims() {
   const bottlenecks = [
     {
       bottleneck: "OPD Queue Delays & Paper Tokens",
-      fix: "Digital 1-click token queues & real-time live doctor call screens cut patient wait times by up to 70%.",
+      fix: "Digital 1-click token queues & real-time patient queue management cut patient wait times by up to 70%.",
       icon: Clock,
       tag: "OPD Bottleneck Fixed",
     },

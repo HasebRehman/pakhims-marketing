@@ -66,14 +66,14 @@ export default function PricingBanner({ onOpenDemo }: PricingBannerProps) {
 
               {/* Subtitle */}
               <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-sans max-w-xl">
-                Digital OPD tokens, IPD ward care, MRN records, blood bank, doctor share ledgers & billing. <strong className="text-white">Save 5,000 PKR instantly</strong> on our 6-Month Package!
+                Get the complete hospital management system for only 5,000 PKR/mo, or choose only the specific modules your hospital needs. <strong className="text-white">Save 5,000 PKR instantly</strong> on our 6-Month Package!
               </p>
 
               {/* Quick Perks Row */}
               <div className="flex flex-wrap gap-x-5 gap-y-2 pt-1 text-xs text-slate-200 font-medium font-sans">
                 <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-xl">
                   <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>No Hidden Fees</span>
+                  <span>Full Suite or Individual Modules</span>
                 </div>
                 <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-xl">
                   <Tag className="w-4 h-4 text-red-400 shrink-0" />
@@ -85,6 +85,7 @@ export default function PricingBanner({ onOpenDemo }: PricingBannerProps) {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-6 sm:pt-8 border-t border-white/10 mt-5">
                 <Link
                   href="/pricing"
+                  scroll={true}
                   className="py-3.5 px-6 bg-[#CE2433] hover:bg-[#E32D3D] text-white text-xs sm:text-sm font-bold rounded-2xl shadow-xl shadow-red-950/60 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-95 group border border-red-400/40"
                 >
                   <span>View Full Pricing & Packages</span>

@@ -18,12 +18,12 @@ export default function LabShowcase() {
     },
     {
       title: "Automated Report Printing",
-      desc: "Pathologist verification screen with instant printable PDF reports and WhatsApp delivery.",
+      desc: "Pathologist verification screen with instant printable PDF reports.",
       icon: FileText,
     },
     {
-      title: "Billing & MRN Integration",
-      desc: "Direct integration with central billing engine so test fees automatically post to patient receipts.",
+      title: "Dedicated Lab Billing & MRN",
+      desc: "Dedicated lab billing engine with instant diagnostic receipts linked directly under patient MRN.",
       icon: ShieldCheck,
     },
   ];

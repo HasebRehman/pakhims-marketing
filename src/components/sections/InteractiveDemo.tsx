@@ -23,12 +23,12 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
   const [activeTab, setActiveTab] = useState<string>("appointment");
 
   const tabs = [
-    { id: "appointment", label: "Online Appointment", icon: Calendar, url: "app.pakhims.com/appointments/online" },
+    { id: "appointment", label: "Appointments", icon: Calendar, url: "app.pakhims.com/appointments/online" },
     { id: "opd", label: "OPD & Tokens", icon: Activity, url: "app.pakhims.com/opd/consultation" },
     { id: "lab", label: "Lab", icon: FlaskConical, url: "app.pakhims.com/lab/diagnostics" },
     { id: "ipd", label: "IPD & Wards", icon: HeartPulse, url: "app.pakhims.com/ipd/beds" },
     { id: "bloodbank", label: "Blood Bank", icon: Droplet, url: "app.pakhims.com/bloodbank/stock" },
-    { id: "billing", label: "Billing Engine", icon: FileText, url: "app.pakhims.com/billing/receipts" },
+    { id: "billing", label: "Billing", icon: FileText, url: "app.pakhims.com/billing/receipts" },
     { id: "accounts", label: "Doctor Accounts", icon: DollarSign, url: "app.pakhims.com/accounts/ledger" },
     { id: "insurance", label: "Insurance", icon: ShieldCheck, url: "app.pakhims.com/insurance/panels" },
     { id: "employee", label: "Employee", icon: UserCheck, url: "app.pakhims.com/employee/rbac" },
@@ -111,68 +111,68 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
               transition={{ duration: 0.35, ease: "easeOut" }}
             >
               <MockBrowserWindow
-                url={tabs.find((t) => t.id === activeTab)?.url}
+                showAddressBar={false}
                 title={`PAKHIMS — ${tabs.find((t) => t.id === activeTab)?.label} Module`}
               >
                 {activeTab === "appointment" && (
                   <img
-                    src="/img/opd-img.png"
-                    alt="PAKHIMS Online Doctor Appointment Scheduling"
+                    src="/img/dashboards/appointment-dashboard.png"
+                    alt="PAKHIMS Appointments Scheduling"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "opd" && (
                   <img
-                    src="/img/opd-img.png"
+                    src="/img/dashboards/opd-dashboard.png"
                     alt="PAKHIMS OPD & Token Management System"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "lab" && (
                   <img
-                    src="/img/opd-img.png"
+                    src="/img/dashboards/lab-dashboard.png"
                     alt="PAKHIMS Lab & Diagnostic Test Catalog"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "ipd" && (
                   <img
-                    src="/img/ipd.png"
+                    src="/img/dashboards/ipd-dashboard.png"
                     alt="PAKHIMS IPD Ward & Bed Care Management"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "bloodbank" && (
                   <img
-                    src="/img/blood-bank.png"
+                    src="/img/dashboards/blood-bank-dashboard.png"
                     alt="PAKHIMS Blood Bank Operations"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "billing" && (
                   <img
-                    src="/img/billing.png"
-                    alt="PAKHIMS Central Billing Engine"
+                    src="/img/dashboards/billing-dashboard.png"
+                    alt="PAKHIMS Billing"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "accounts" && (
                   <img
-                    src="/img/accounts.png"
+                    src="/img/dashboards/accounts-dashboard.png"
                     alt="PAKHIMS Doctor Revenue Accounts & Ledger"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "insurance" && (
                   <img
-                    src="/img/billing.png"
+                    src="/img/dashboards/insurance-dashboard.png"
                     alt="PAKHIMS Insurance & Panel Claim Verification"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "employee" && (
                   <img
-                    src="/img/accounts.png"
+                    src="/img/dashboards/employee-dashboard.png"
                     alt="PAKHIMS Employee RBAC & Role Management"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
