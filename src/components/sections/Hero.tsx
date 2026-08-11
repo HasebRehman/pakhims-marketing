@@ -111,7 +111,7 @@ export default function Hero({ onOpenDemo }: HeroProps) {
             </button>
 
             <a
-              href="https://profile.pakhims.com/"
+              href="https://pakhims.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-slate-50 hover:bg-slate-100 border border-slate-300 text-slate-800 text-sm sm:text-base font-bold rounded-full shadow-2xs flex items-center justify-center gap-2.5 transition-all hover:border-slate-400"

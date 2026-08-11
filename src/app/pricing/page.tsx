@@ -25,8 +25,8 @@ export default function PricingPage() {
       a: "PAKHIMS offers a transparent subscription of 5,000 PKR / month. There are zero hidden setup fees, zero per-user charges, and zero per-patient costs. Every subscription includes full access to OPD, IPD, Patient History (MRN), Doctor Accounts, and Billing modules.",
     },
     {
-      q: "How does the 6-Month Semi-Annual Package work?",
-      a: "The 6-Month Semi-Annual Package is priced at 30,000 PKR for 6 full months of operation (5,000 PKR / month). It includes complete system setup, doctor share ledger configuration, and full staff onboarding.",
+      q: "What paid subscription packages do you offer?",
+      a: "We offer two paid subscription plans: a 6-Month Semi-Annual Package at 30,000 PKR (equivalent to 5,000 PKR/month) and a 1-Year Annual Package at 50,000 PKR (which saves you 10,000 PKR, equivalent to 4,166 PKR/month). Both packages include complete system setup, doctor share ledger configuration, and full staff onboarding.",
     },
     {
       q: "Are there any hidden installation, database, or server maintenance fees?",
@@ -34,7 +34,7 @@ export default function PricingPage() {
     },
     {
       q: "What core hospital modules are included in PAKHIMS standard packages?",
-      a: "Standard packages include our core hospital suite: Out-Patient Department (OPD) live token queues & Rx builder, In-Patient Department (IPD) ward bed care manager, Permanent Medical Record Number (MRN) patient history, Doctor percentage share calculator, and Itemized Billing receipts.",
+      a: "Standard packages include our core hospital suite: Out-Patient Department (OPD) live token queues & Rx builder, In-Patient Department (IPD) ward bed care manager, Permanent Medical Record Number (MRN) patient history, Doctor percentage share calculator, Itemized Billing receipts, and the 24/7 Online Appointment Booking portal (Apni Appointment).",
     },
     {
       q: "How does the Doctor Percentage Share & Revenue Allocation engine work?",
@@ -51,10 +51,6 @@ export default function PricingPage() {
     {
       q: "How fast can our hospital deploy PAKHIMS?",
       a: "Deployment is fast and seamless! Our technical team configures your hospital profile, ward/room categories, doctor share rates, and trains your staff within 24 to 48 hours.",
-    },
-    {
-      q: "Can we migrate our existing patient records into PAKHIMS?",
-      a: "Yes! Free data migration is included with our 6-Month Package. Our technical team assists in importing your existing patient lists, doctor profiles, and inventory data safely into PAKHIMS.",
     },
   ];
 

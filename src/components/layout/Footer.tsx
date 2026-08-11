@@ -103,7 +103,7 @@ export default function Footer({ onOpenDemo }: FooterProps) {
             {/* Official Google Play Store Badge (Under Request Free Demo) */}
             <div>
               <a
-                href="https://play.google.com"
+                href="https://play.google.com/store/search?q=apni%20appointment&c=apps"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-black hover:bg-slate-900 border border-slate-700/90 hover:border-slate-500 rounded-xl text-white transition-all duration-200 shadow-md group hover:scale-[1.02] active:scale-95"

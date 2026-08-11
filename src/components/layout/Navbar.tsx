@@ -20,7 +20,7 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
     { name: "Overview", href: "/#hero", id: "hero" },
     { name: "Signature Core", href: "/#signature", id: "signature" },
     { name: "Ecosystem", href: "/#ecosystem", id: "ecosystem" },
-    { name: "Modules", href: "/#modules", id: "modules" },
+    { name: "Online Appointment", href: "/#online-appointments", id: "online-appointments" },
     { name: "Interactive Demo", href: "/#demo", id: "demo" },
     { name: "Why PAKHIMS", href: "/#why-pakhims", id: "why-pakhims" },
     { name: "Pricing", href: "/pricing", id: "pricing" },
@@ -30,13 +30,14 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
     hero: "hero",
     signature: "signature",
     ecosystem: "ecosystem",
-    modules: "modules",
-    records: "modules",
-    accounts: "modules",
-    opd: "modules",
-    ipd: "modules",
-    billing: "modules",
-    bloodbank: "modules",
+    "online-appointments": "online-appointments",
+    modules: "online-appointments",
+    records: "online-appointments",
+    accounts: "online-appointments",
+    opd: "online-appointments",
+    ipd: "online-appointments",
+    billing: "online-appointments",
+    bloodbank: "online-appointments",
     pricing: "pricing",
     "why-pakhims": "why-pakhims",
     demo: "demo",
@@ -48,7 +49,7 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
       return;
     }
     if (pathname === "/features") {
-      setActiveSection("modules");
+      setActiveSection("online-appointments");
       return;
     }
 

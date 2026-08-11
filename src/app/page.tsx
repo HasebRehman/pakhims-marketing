@@ -7,6 +7,7 @@ import SignatureEcosystemAnimation from "@/components/sections/SignatureEcosyste
 import ProblemSolution from "@/components/sections/ProblemSolution";
 import ProductEcosystem from "@/components/sections/ProductEcosystem";
 import PakHimsByTheNumbers from "@/components/sections/PakHimsByTheNumbers";
+import AppointmentShowcase from "@/components/sections/AppointmentShowcase";
 import OpdShowcase from "@/components/sections/OpdShowcase";
 import IpdShowcase from "@/components/sections/IpdShowcase";
 import PatientHistoryShowcase from "@/components/sections/PatientHistoryShowcase";
@@ -15,7 +16,6 @@ import BloodBankShowcase from "@/components/sections/BloodBankShowcase";
 import EmployeeAccountsInsurance from "@/components/sections/EmployeeAccountsInsurance";
 import InteractiveDemo from "@/components/sections/InteractiveDemo";
 import WhyPakHims from "@/components/sections/WhyPakHims";
-import TargetAudience from "@/components/sections/TargetAudience";
 import PricingBanner from "@/components/sections/PricingBanner";
 import Testimonials from "@/components/sections/Testimonials";
 import Footer from "@/components/layout/Footer";
@@ -44,6 +44,9 @@ export default function Home() {
       {/* Meet PAKHIMS Ecosystem Graph */}
       <ProductEcosystem />
 
+      {/* Online Appointment Booking Section */}
+      <AppointmentShowcase />
+
       {/* PAKHIMS by the Numbers Animated Metrics */}
       <PakHimsByTheNumbers />
 
@@ -56,9 +59,6 @@ export default function Home() {
 
       {/* Why PAKHIMS ROI Benefits */}
       <WhyPakHims />
-
-      {/* Target Buyer Persona */}
-      <TargetAudience />
 
       {/* Pricing Highlight Banner */}
       <PricingBanner onOpenDemo={handleOpenDemo} />

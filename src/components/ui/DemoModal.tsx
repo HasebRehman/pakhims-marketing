@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, CheckCircle2, Building2, User, Mail, Phone, BedDouble, ArrowRight, ShieldCheck } from "lucide-react";
+import { X, CheckCircle2, Building2, User, Mail, Phone, BedDouble, ArrowRight, ShieldCheck, MapPin } from "lucide-react";
 
 interface DemoModalProps {
   isOpen: boolean;
@@ -16,6 +16,9 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
   const [formData, setFormData] = useState({
     name: "",
     hospital: "",
+    address: "",
+    city: "",
+    state: "",
     role: "Administrator",
     email: "",
     phone: "",
@@ -52,7 +55,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -68,10 +71,10 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 my-8"
+            className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 my-8 flex flex-col max-h-[90vh] sm:max-h-[85vh]"
           >
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-[#224183] to-[#152A56] p-6 text-white relative">
+            <div className="bg-gradient-to-r from-[#224183] to-[#152A56] p-6 text-white relative shrink-0">
               <button
                 onClick={resetAndClose}
                 className="absolute top-4 right-4 p-2 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-all"
@@ -90,7 +93,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             </div>
 
             {/* Content Area */}
-            <div className="p-6 sm:p-8">
+            <div className="p-6 sm:p-8 overflow-y-auto flex-1 no-scrollbar" data-lenis-prevent>
               {submitted ? (
                 <div className="text-center py-8">
                   <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
@@ -104,6 +107,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                   <div className="mt-8 p-4 bg-slate-50 rounded-xl border border-slate-200 text-left text-xs text-slate-500 max-w-md mx-auto space-y-1">
                     <p className="font-semibold text-slate-700">Request Summary:</p>
                     <p>• Hospital: {formData.hospital}</p>
+                    <p>• Address: {formData.address}, {formData.city}, {formData.state}</p>
                     <p>• Hospital Capacity: {formData.beds} Beds</p>
                     <p>• Selected Modules: {formData.modules.join(", ")}</p>
                   </div>
@@ -229,6 +233,62 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="admin@hospital.com"
+                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#224183] focus:bg-white text-slate-900"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hospital / Clinic Address */}
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                      Hospital / Clinic Address *
+                    </label>
+                    <div className="relative">
+                      <MapPin className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
+                      <input
+                        type="text"
+                        required
+                        value={formData.address}
+                        onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                        placeholder="e.g. Plot 45-C, 24th Commercial Street, Phase II Ext"
+                        className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#224183] focus:bg-white text-slate-900"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {/* City */}
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                        City *
+                      </label>
+                      <div className="relative">
+                        <MapPin className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
+                        <input
+                          type="text"
+                          required
+                          value={formData.city}
+                          onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                          placeholder="e.g. Karachi"
+                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#224183] focus:bg-white text-slate-900"
+                        />
+                      </div>
+                    </div>
+
+                    {/* State */}
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                        State / Province *
+                      </label>
+                      <div className="relative">
+                        <MapPin className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
+                        <input
+                          type="text"
+                          required
+                          value={formData.state}
+                          onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                          placeholder="e.g. Sindh"
                           className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#224183] focus:bg-white text-slate-900"
                         />
                       </div>
