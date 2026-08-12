@@ -182,17 +182,20 @@ export default function Hero({ onOpenDemo }: HeroProps) {
             onMouseLeave={() => setLaptopHovered(false)}
           >
             <MockBrowserWindow
-              url="https://profile.pakhims.com/"
-              title="PAKHIMS — Official Profile Website Showcase"
+              showAddressBar={false}
+              title="PAKHIMS"
             >
-              <div className="w-full h-[460px] sm:h-[540px] overflow-hidden relative bg-white">
-                <div
-                  className={`w-full relative transition-transform duration-[8000ms] ease-in-out ${
-                    laptopHovered ? "-translate-y-[62%]" : "translate-y-0"
-                  }`}
-                >
-                  <DesktopProfileShowcase />
-                </div>
+              <div className="w-full h-[460px] sm:h-[540px] overflow-hidden rounded-2xl relative bg-slate-950">
+                {/* Video preview — autoplays continuously */}
+                <video
+                  src="/video/pakhims-video.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  className="w-full h-full object-cover rounded-2xl opacity-100"
+                />
               </div>
             </MockBrowserWindow>
           </div>

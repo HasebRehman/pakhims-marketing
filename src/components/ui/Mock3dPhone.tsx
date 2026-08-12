@@ -1,20 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { MobileProfileShowcase } from "./PakhimsProfileShowcase";
-
 interface Mock3dPhoneProps {
   className?: string;
 }
 
 export default function Mock3dPhone({ className = "" }: Mock3dPhoneProps) {
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
-      className={`relative phone-3d-tilt z-30 cursor-pointer group/phone ${className}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <a
+      href="https://play.google.com/store/search?q=apni%20appointment&c=apps"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`relative phone-3d-tilt z-30 group/phone block cursor-pointer hover:scale-[1.02] active:scale-98 transition-all ${className}`}
     >
       {/* 3D Phone Outer Shell */}
       <div className="w-[270px] sm:w-[290px] h-[540px] bg-slate-900 rounded-[44px] p-3 shadow-2xl shadow-slate-900/60 border-4 border-slate-700/80 relative overflow-hidden">
@@ -34,18 +31,15 @@ export default function Mock3dPhone({ className = "" }: Mock3dPhoneProps) {
           </div>
         </div>
 
-        {/* Live Mobile Web Preview Container */}
-        <div className="w-full h-[470px] bg-white rounded-b-[32px] overflow-hidden relative border border-slate-800">
-          {/* Scrolling Web View */}
-          <div
-            className={`w-full relative transition-transform duration-[8000ms] ease-in-out ${
-              isHovered ? "-translate-y-[55%]" : "translate-y-0"
-            }`}
-          >
-            <MobileProfileShowcase />
-          </div>
+        {/* Phone Screen — Real Screenshot */}
+        <div className="w-full h-[470px] rounded-b-[32px] overflow-hidden relative border border-slate-800">
+          <img
+            src="/img/apniAppointment-mobile.png"
+            alt="Apni Appointment Mobile App Screenshot"
+            className="w-full h-full object-cover object-top"
+          />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
