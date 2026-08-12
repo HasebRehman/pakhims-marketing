@@ -12,8 +12,8 @@ export default function PatientHistoryShowcase() {
       desc: "Instant patient registration. A permanent Medical Record Number (MRN) is generated to anchor all lifetime visits.",
       icon: UserPlus,
       badge: "Universal MRN",
-      color: "bg-blue-50 text-[#224183] border-blue-200",
-      accent: "bg-[#224183]",
+      color: "bg-blue-50 text-[#077dd3] border-blue-200",
+      accent: "bg-[#077dd3]",
     },
     {
       step: "02",
@@ -75,7 +75,7 @@ export default function PatientHistoryShowcase() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 sm:mb-16">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
             Every Patient Story, <br />
-            <span className="text-[#224183]">In One Connected Record.</span>
+            <span className="text-[#077dd3]">In One Connected Record.</span>
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-sans">
@@ -127,7 +127,7 @@ export default function PatientHistoryShowcase() {
           </div>
 
           {/* Vertical Connecting Timeline Line for Mobile/Tablet */}
-          <div className="lg:hidden absolute top-8 bottom-8 left-8 w-1 bg-gradient-to-b from-[#224183] via-[#CE2433] to-emerald-600 rounded-full z-0 pointer-events-none" />
+          <div className="lg:hidden absolute top-8 bottom-8 left-8 w-1 bg-gradient-to-b from-[#077dd3] via-[#CE2433] to-emerald-600 rounded-full z-0 pointer-events-none" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
             {journeyStages.map((stage, idx) => {
@@ -139,7 +139,7 @@ export default function PatientHistoryShowcase() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  className="bg-white border border-slate-200/90 rounded-3xl p-6 relative flex flex-col justify-between group hover:border-[#224183]/80 hover:shadow-xl transition-all duration-300 shadow-sm"
+                  className="bg-white border border-slate-200/90 rounded-3xl p-6 relative flex flex-col justify-between group hover:border-[#077dd3]/80 hover:shadow-xl transition-all duration-300 shadow-sm"
                 >
                   {/* Top Accent Strip & Stage Number */}
                   <div className="flex items-center justify-between mb-5">
@@ -157,7 +157,7 @@ export default function PatientHistoryShowcase() {
                       <Icon className="w-5.5 h-5.5" />
                     </div>
 
-                    <h4 className="font-extrabold text-base text-slate-900 font-heading group-hover:text-[#224183] transition-colors">
+                    <h4 className="font-extrabold text-base text-slate-900 font-heading group-hover:text-[#077dd3] transition-colors">
                       {stage.title}
                     </h4>
                     <div className="text-[11px] font-mono text-slate-400 font-medium">

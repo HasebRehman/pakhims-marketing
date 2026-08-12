@@ -33,7 +33,7 @@ export default function PageLoader() {
           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0a1428] text-white select-none overflow-hidden"
         >
           {/* Ambient Background Glows */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] sm:w-[650px] sm:h-[650px] bg-gradient-to-tr from-[#224183]/40 via-red-600/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] sm:w-[650px] sm:h-[650px] bg-gradient-to-tr from-[#077dd3]/40 via-red-600/15 to-transparent rounded-full blur-3xl pointer-events-none" />
           <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
           {/* Loader Main Card Container */}
@@ -46,7 +46,7 @@ export default function PageLoader() {
               className="p-5 sm:p-7 rounded-3xl bg-slate-900/90 border border-slate-700/80 shadow-2xl backdrop-blur-xl mb-6 sm:mb-8 ring-1 ring-blue-500/20 flex flex-col items-center justify-center"
             >
               <img
-                src="/img/pak-hims-logo.png"
+                src="/img/pakhims-logo.png"
                 alt="PAKHIMS Platform Loading"
                 className="h-10 sm:h-14 w-auto object-contain drop-shadow-md mb-3"
               />
@@ -78,7 +78,7 @@ export default function PageLoader() {
             <div className="w-52 sm:w-72 space-y-2.5">
               <div className="h-1.5 w-full bg-slate-800/90 rounded-full overflow-hidden border border-slate-700/60 p-0.5 shadow-inner">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-[#224183] via-[#CE2433] to-red-500 rounded-full shadow-[0_0_12px_rgba(206,36,51,0.8)]"
+                  className="h-full bg-gradient-to-r from-[#077dd3] via-[#CE2433] to-red-500 rounded-full shadow-[0_0_12px_rgba(206,36,51,0.8)]"
                   style={{ width: `${Math.min(progress, 100)}%` }}
                   transition={{ duration: 0.1, ease: "easeOut" }}
                 />

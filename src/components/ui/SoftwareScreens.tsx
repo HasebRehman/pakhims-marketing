@@ -22,11 +22,11 @@ export function OpdScreen() {
       {/* Top Header */}
       <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-200">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-[#224183] text-white flex items-center justify-center font-bold shadow-sm">
+          <div className="w-9 h-9 rounded-lg bg-[#077dd3] text-white flex items-center justify-center font-bold shadow-sm">
             OPD
           </div>
           <div>
-            <h4 className="font-bold text-sm text-[#224183]">Out-Patient Department (OPD) Desk</h4>
+            <h4 className="font-bold text-sm text-[#077dd3]">Out-Patient Department (OPD) Desk</h4>
             <p className="text-slate-500 text-[11px]">Real-time Patient Token & Consultation Manager</p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export function OpdScreen() {
                 key={pt.id}
                 className={`p-2.5 rounded-lg border transition-all ${
                   pt.active
-                    ? "bg-white border-[#224183] text-slate-900 shadow-md shadow-blue-900/5 ring-1 ring-blue-500/20"
+                    ? "bg-white border-[#077dd3] text-slate-900 shadow-md shadow-blue-900/5 ring-1 ring-blue-500/20"
                     : "bg-white/60 border-slate-200 text-slate-700 hover:border-slate-300"
                 }`}
               >
@@ -92,7 +92,7 @@ export function OpdScreen() {
             <div className="flex items-center gap-2">
               <Stethoscope className="w-4 h-4 text-[#CE2433]" />
               <span className="font-bold text-slate-900">Active Consultation: Muhammad Ali</span>
-              <span className="text-[10px] bg-blue-100 text-[#224183] px-2 py-0.5 rounded font-semibold border border-blue-200">
+              <span className="text-[10px] bg-blue-100 text-[#077dd3] px-2 py-0.5 rounded font-semibold border border-blue-200">
                 MRN: 9482-PK
               </span>
             </div>
@@ -113,7 +113,7 @@ export function OpdScreen() {
             </div>
             <div>
               <div className="text-[10px] text-slate-500 font-sans">SPO2</div>
-              <div className="text-[#224183] font-bold text-xs">98%</div>
+              <div className="text-[#077dd3] font-bold text-xs">98%</div>
             </div>
             <div>
               <div className="text-[10px] text-slate-500 font-sans">TEMP</div>
@@ -142,7 +142,7 @@ export function OpdScreen() {
           <div className="flex items-center justify-between p-3 bg-blue-50/80 border border-blue-200 rounded-lg">
             <div>
               <div className="text-[10px] text-slate-600">Consultation Fee + OPD Registration</div>
-              <div className="font-bold text-[#224183] text-sm">PKR 2,500 <span className="text-xs font-normal text-emerald-600">(Paid - Receipt #OPD-INV-892)</span></div>
+              <div className="font-bold text-[#077dd3] text-sm">PKR 2,500 <span className="text-xs font-normal text-emerald-600">(Paid - Receipt #OPD-INV-892)</span></div>
             </div>
             <button className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-bold flex items-center gap-1 shadow-xs">
               <CheckCircle2 className="w-3.5 h-3.5" /> Complete Consultation
@@ -164,11 +164,11 @@ export function IpdScreen() {
             IPD
           </div>
           <div>
-            <h4 className="font-bold text-sm text-[#224183]">In-Patient Department (IPD) Admissions</h4>
+            <h4 className="font-bold text-sm text-[#077dd3]">In-Patient Department (IPD) Admissions</h4>
             <p className="text-slate-500 text-[11px]">Ward Management, Vitals Monitoring & Discharge Ledger</p>
           </div>
         </div>
-        <span className="px-2.5 py-1 bg-blue-50 border border-blue-200 text-[#224183] rounded-md font-semibold text-[11px]">
+        <span className="px-2.5 py-1 bg-blue-50 border border-blue-200 text-[#077dd3] rounded-md font-semibold text-[11px]">
           Occupancy Rate: 86% (43 / 50 Beds)
         </span>
       </div>
@@ -238,7 +238,7 @@ export function BloodBankScreen() {
             <Droplet className="w-5 h-5" />
           </div>
           <div>
-            <h4 className="font-bold text-sm text-[#224183]">Blood Bank Operations & Donor Registry</h4>
+            <h4 className="font-bold text-sm text-[#077dd3]">Blood Bank Operations & Donor Registry</h4>
             <p className="text-slate-500 text-[11px]">Collection → Screening → Testing → Cross-Match → Issuing</p>
           </div>
         </div>
@@ -312,7 +312,7 @@ export function BloodBankScreen() {
               </div>
             </div>
           </div>
-          <button className="mt-3 w-full py-1.5 bg-[#224183] text-white font-bold rounded flex items-center justify-center gap-1 text-[11px] shadow-xs">
+          <button className="mt-3 w-full py-1.5 bg-[#077dd3] text-white font-bold rounded flex items-center justify-center gap-1 text-[11px] shadow-xs">
             <Printer className="w-3.5 h-3.5" /> Print Blood Bag Barcode Label
           </button>
         </div>
@@ -331,7 +331,7 @@ export function BillingInvoiceScreen() {
             <DollarSign className="w-5 h-5" />
           </div>
           <div>
-            <h4 className="font-bold text-sm text-[#224183]">Central Hospital Billing & Invoicing Engine</h4>
+            <h4 className="font-bold text-sm text-[#077dd3]">Central Hospital Billing & Invoicing Engine</h4>
             <p className="text-slate-500 text-[11px]">OPD, IPD, Pharmacy, Blood Bank & Insurance Collections</p>
           </div>
         </div>
@@ -344,7 +344,7 @@ export function BillingInvoiceScreen() {
       <div className="bg-white text-slate-900 rounded-xl p-4 sm:p-6 shadow-md border border-slate-200 font-sans">
         <div className="flex justify-between items-start border-b pb-4 mb-4">
           <div>
-            <div className="text-xl font-black text-[#224183]">PAKHIMS HOSPITAL</div>
+            <div className="text-xl font-black text-[#077dd3]">PAKHIMS HOSPITAL</div>
             <div className="text-xs text-slate-500">Main Campus, Medical City, Pakistan</div>
             <div className="text-xs text-slate-500 font-mono">NTN: 849204-1 | Reg: HMS-902</div>
           </div>
@@ -413,7 +413,7 @@ export function BillingInvoiceScreen() {
           <span className="text-xs text-slate-500 font-sans">System Generated Invoice</span>
           <div className="text-right">
             <span className="text-xs text-slate-600 block">TOTAL AMOUNT:</span>
-            <span className="text-lg font-black text-[#224183]">PKR 5,000</span>
+            <span className="text-lg font-black text-[#077dd3]">PKR 5,000</span>
           </div>
         </div>
       </div>
@@ -427,11 +427,11 @@ export function AccountsScreen() {
     <div className="bg-white text-slate-800 rounded-xl p-3 sm:p-5 border border-slate-200 text-xs font-sans shadow-xs">
       <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-200">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-[#224183] text-white flex items-center justify-center font-bold shadow-sm">
+          <div className="w-9 h-9 rounded-lg bg-[#077dd3] text-white flex items-center justify-center font-bold shadow-sm">
             <FileSpreadsheet className="w-5 h-5" />
           </div>
           <div>
-            <h4 className="font-bold text-sm text-[#224183]">Doctor Shared Accounts & Revenue Shares</h4>
+            <h4 className="font-bold text-sm text-[#077dd3]">Doctor Shared Accounts & Revenue Shares</h4>
             <p className="text-slate-500 text-[11px]">Daily Fixed, Monthly Fixed & Per-Patient Percentage Splits</p>
           </div>
         </div>

@@ -39,9 +39,9 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-12">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#224183] tracking-tight font-heading leading-tight pb-3">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#077dd3] tracking-tight font-heading leading-tight pb-3">
             See{" "}
-            <span className="relative inline-block text-[#224183]">
+            <span className="relative inline-block text-[#077dd3]">
               PAKHIMS
               {/* Animated Hand-Drawn Red Marker Underline SVG */}
               <motion.svg
@@ -89,7 +89,7 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
                 onClick={() => setActiveTab(t.id)}
                 className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl sm:rounded-full font-bold text-[11px] sm:text-xs flex items-center gap-1.5 transition-all duration-300 relative shrink-0 whitespace-nowrap ${
                   isActive
-                    ? "bg-[#224183] text-white shadow-md shadow-[#224183]/20"
+                    ? "bg-[#077dd3] text-white shadow-md shadow-[#077dd3]/20"
                     : "bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-50 border border-slate-200/70"
                 }`}
               >
@@ -113,6 +113,7 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
               <MockBrowserWindow
                 showAddressBar={false}
                 title={`PAKHIMS — ${tabs.find((t) => t.id === activeTab)?.label} Module`}
+                minHeightClass="min-h-0"
               >
                 {activeTab === "appointment" && (
                   <img

@@ -64,7 +64,7 @@ export default function PricingPage() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col items-center">
           <div className="max-w-3xl space-y-4 text-center">
             <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-2">
-              <span className="text-[#224183] relative inline-block">
+              <span className="text-[#077dd3] relative inline-block">
                 PAKHIMS
                 {/* Animated Hand-Drawn Red Marker Underline SVG */}
                 <motion.svg
@@ -93,7 +93,7 @@ export default function PricingPage() {
                   />
                 </motion.svg>
               </span>{" "}
-              <span className="text-[#224183]">Official Pricing</span> <br />
+              <span className="text-[#077dd3]">Official Pricing</span> <br />
               <span className="text-slate-900">& Packages.</span>
             </h1>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-sans mx-auto">
@@ -110,42 +110,44 @@ export default function PricingPage() {
       <section className="py-8 sm:py-16 bg-slate-50 text-slate-900 relative border-t border-slate-200/80">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-3 mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-[#224183] border border-blue-200 text-xs font-bold font-mono">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-[#077dd3] border border-blue-200 text-xs font-bold font-mono">
               <HelpCircle className="w-4 h-4 text-[#CE2433]" />
               <span>FREQUENTLY ASKED QUESTIONS</span>
             </div>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading leading-tight pb-2">
-              Got Questions About Our{" "}
-              <span className="relative inline-block text-[#224183]">
-                PAKHIMS
-                {/* Animated Hand-Drawn Red Marker Underline SVG */}
-                <motion.svg
-                  className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-3.5 sm:h-4.5 overflow-visible pointer-events-none"
-                  viewBox="0 0 160 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                >
-                  <motion.path
-                    d="M 3,10 C 35,3 105,2 157,7 M 18,17 C 65,11 125,10 159,14"
-                    stroke="#CE2433"
-                    strokeWidth="7.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    variants={{
-                      hidden: { pathLength: 0, opacity: 0 },
-                      visible: {
-                        pathLength: 1,
-                        opacity: 1,
-                        transition: { duration: 0.85, ease: "easeInOut", delay: 0.25 }
-                      }
-                    }}
-                  />
-                </motion.svg>
+              Got Questions <br className="sm:hidden" /> About Our{" "}
+              <span className="whitespace-nowrap">
+                <span className="relative inline-block text-[#077dd3]">
+                  PAKHIMS
+                  {/* Animated Hand-Drawn Red Marker Underline SVG */}
+                  <motion.svg
+                    className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-3.5 sm:h-4.5 overflow-visible pointer-events-none"
+                    viewBox="0 0 160 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                  >
+                    <motion.path
+                      d="M 3,10 C 35,3 105,2 157,7 M 18,17 C 65,11 125,10 159,14"
+                      stroke="#CE2433"
+                      strokeWidth="7.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      variants={{
+                        hidden: { pathLength: 0, opacity: 0 },
+                        visible: {
+                          pathLength: 1,
+                          opacity: 1,
+                          transition: { duration: 0.85, ease: "easeInOut", delay: 0.25 }
+                        }
+                      }}
+                    />
+                  </motion.svg>
+                </span>
+                ?
               </span>
-              ?
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 font-sans max-w-xl mx-auto">
               Everything you need to know about PAKHIMS platform modules, doctor share ledgers, pricing plans, and hospital onboarding.
@@ -163,7 +165,7 @@ export default function PricingPage() {
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left font-bold text-sm sm:text-base text-slate-900 font-heading flex items-center justify-between gap-4 hover:text-[#224183] transition-colors"
+                    className="w-full p-5 text-left font-bold text-sm sm:text-base text-slate-900 font-heading flex items-center justify-between gap-4 hover:text-[#077dd3] transition-colors"
                   >
                     <span className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-[#CE2433] shrink-0" />
@@ -171,7 +173,7 @@ export default function PricingPage() {
                     </span>
                     <ChevronDown
                       className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-[#224183]" : ""
+                        isOpen ? "rotate-180 text-[#077dd3]" : ""
                       }`}
                     />
                   </button>

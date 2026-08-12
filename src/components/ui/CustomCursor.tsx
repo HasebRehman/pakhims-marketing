@@ -94,7 +94,7 @@ export default function CustomCursor() {
               : "0 0 12px rgba(34, 65, 131, 0.12)",
           }}
           transition={{ duration: 0.22, ease: "easeOut" }}
-          className="w-11 h-11 rounded-full border-2 border-[#224183]/45 flex items-center justify-center relative backdrop-blur-[1px]"
+          className="w-11 h-11 rounded-full border-2 border-[#077dd3]/45 flex items-center justify-center relative backdrop-blur-[1px]"
         >
           {/* Rotating Pulse Ring on Interactive Hover */}
           {isHovered && (

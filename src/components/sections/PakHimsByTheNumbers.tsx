@@ -89,7 +89,7 @@ export default function PakHimsByTheNumbers() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 sm:mb-16">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-3">
-            <span className="relative inline-block text-[#224183]">
+            <span className="relative inline-block text-[#077dd3]">
               PAKHIMS
               {/* Animated Hand-Drawn Red Marker Underline SVG */}
               <motion.svg

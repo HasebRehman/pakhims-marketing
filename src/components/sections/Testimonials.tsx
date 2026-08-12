@@ -14,7 +14,7 @@ export default function Testimonials() {
       quote: "PAKHIMS has revolutionized how I manage my practice. The seamless appointment system and patient management tools have increased my efficiency by 40%. It's truly the future of healthcare management.",
       rating: 5,
       initials: "DZ",
-      color: "bg-[#224183]",
+      color: "bg-[#077dd3]",
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ export default function Testimonials() {
       quote: "The patient communication features and scheduling system have transformed my practice. Parents can easily book appointments and track their children's health records. Highly recommended!",
       rating: 5,
       initials: "SM",
-      color: "bg-[#224183]",
+      color: "bg-[#077dd3]",
     },
     {
       id: 4,
@@ -86,7 +86,7 @@ export default function Testimonials() {
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-2">
               <span className="inline-block sm:whitespace-nowrap">Trusted By Doctors & Patients</span> <br />
               <span>Across </span>
-              <span className="relative inline-block text-[#224183]">
+              <span className="relative inline-block text-[#077dd3]">
                 PAKHIMS
                 {/* Animated Hand-Drawn Red Marker Underline SVG */}
                 <motion.svg
@@ -128,14 +128,14 @@ export default function Testimonials() {
             <button
               onClick={handlePrev}
               aria-label="Previous testimonial"
-              className="w-12 h-12 rounded-full bg-white border border-slate-200 text-[#224183] hover:bg-[#224183] hover:text-white hover:border-[#224183] shadow-md transition-all duration-300 flex items-center justify-center group active:scale-95"
+              className="w-12 h-12 rounded-full bg-white border border-slate-200 text-[#077dd3] hover:bg-[#077dd3] hover:text-white hover:border-[#077dd3] shadow-md transition-all duration-300 flex items-center justify-center group active:scale-95"
             >
               <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-0.5" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next testimonial"
-              className="w-12 h-12 rounded-full bg-white border border-slate-200 text-[#224183] hover:bg-[#224183] hover:text-white hover:border-[#224183] shadow-md transition-all duration-300 flex items-center justify-center group active:scale-95"
+              className="w-12 h-12 rounded-full bg-white border border-slate-200 text-[#077dd3] hover:bg-[#077dd3] hover:text-white hover:border-[#077dd3] shadow-md transition-all duration-300 flex items-center justify-center group active:scale-95"
             >
               <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-0.5" />
             </button>
@@ -159,7 +159,7 @@ export default function Testimonials() {
                 return (
                   <div
                     key={`${rev.id}-${offset}`}
-                    className={`bg-white border border-slate-200/90 p-8 rounded-3xl space-y-5 shadow-sm hover:border-[#224183]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group text-left ${
+                    className={`bg-white border border-slate-200/90 p-8 rounded-3xl space-y-5 shadow-sm hover:border-[#077dd3]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group text-left ${
                       offset === 1 ? "hidden md:flex" : ""
                     } ${offset === 2 ? "hidden lg:flex" : ""}`}
                   >
@@ -172,7 +172,7 @@ export default function Testimonials() {
                           ))}
                         </div>
 
-                        <div className="w-8 h-8 rounded-xl bg-blue-50 text-[#224183] flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-xl bg-blue-50 text-[#077dd3] flex items-center justify-center">
                           <Quote className="w-4 h-4 text-[#CE2433]" />
                         </div>
                       </div>
@@ -190,7 +190,7 @@ export default function Testimonials() {
                       </div>
 
                       <div className="min-w-0 flex-1">
-                        <h3 className="font-extrabold text-slate-900 text-sm sm:text-base font-heading truncate group-hover:text-[#224183] transition-colors">
+                        <h3 className="font-extrabold text-slate-900 text-sm sm:text-base font-heading truncate group-hover:text-[#077dd3] transition-colors">
                           {rev.name}
                         </h3>
                         <div className="text-xs text-[#CE2433] font-medium font-sans truncate">
@@ -218,7 +218,7 @@ export default function Testimonials() {
               aria-label={`Go to slide ${idx + 1}`}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 currentIndex === idx
-                  ? "w-8 bg-[#224183]"
+                  ? "w-8 bg-[#077dd3]"
                   : "w-2.5 bg-slate-300 hover:bg-slate-400"
               }`}
             />

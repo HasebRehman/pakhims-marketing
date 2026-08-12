@@ -71,7 +71,7 @@ export default function SignatureEcosystemAnimation() {
       title: "IPD & Bed Journey",
       desc: "Ward Admissions & Vitals",
       icon: HeartPulse,
-      color: "bg-[#224183]",
+      color: "bg-[#077dd3]",
       initialX: 450,
       initialY: -220,
       targetX: 300,
@@ -186,7 +186,7 @@ export default function SignatureEcosystemAnimation() {
     >
       {/* Background Ambient Glow & Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#224183]/30 via-red-600/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#077dd3]/30 via-red-600/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       {/* Inline ECG CSS Animation */}
       <style jsx>{`
@@ -232,12 +232,12 @@ export default function SignatureEcosystemAnimation() {
         {/* CENTRAL PAKHIMS PLATFORM CORE BOX */}
         <div
           ref={coreRef}
-          className="relative z-30 w-28 h-28 sm:w-52 sm:h-52 rounded-2xl sm:rounded-3xl bg-slate-900/95 border-2 border-[#224183] shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center p-2 sm:p-4 text-center transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,65,131,0.7)] hover:border-blue-400 group"
+          className="relative z-30 w-28 h-28 sm:w-52 sm:h-52 rounded-2xl sm:rounded-3xl bg-slate-900/95 border-2 border-[#077dd3] shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center p-2 sm:p-4 text-center transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,65,131,0.7)] hover:border-blue-400 group"
         >
           <div className="relative z-10 flex flex-col items-center w-full">
             {/* Logo Image */}
             <img
-              src="/img/pak-hims-logo.png"
+              src="/img/pakhims-logo.png"
               alt="PAKHIMS Central Platform Core"
               className="h-6 sm:h-12 w-auto object-contain mb-1 sm:mb-2 drop-shadow-md"
             />

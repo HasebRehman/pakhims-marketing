@@ -10,7 +10,7 @@ export default function FinalCta({ onOpenDemo }: FinalCtaProps) {
   return (
     <section className="py-24 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-gradient-to-br from-[#224183] to-[#152A56] rounded-3xl p-8 sm:p-16 text-center space-y-8 shadow-2xl relative overflow-hidden text-white">
+        <div className="bg-gradient-to-br from-[#077dd3] to-[#0564aa] rounded-3xl p-8 sm:p-16 text-center space-y-8 shadow-2xl relative overflow-hidden text-white">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold text-white border border-white/20">
             <Sparkles className="w-4 h-4 text-[#CE2433]" />
             TRANSFORM YOUR HOSPITAL OPERATIONS

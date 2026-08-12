@@ -30,7 +30,7 @@ export default function PricingBanner({ onOpenDemo }: PricingBannerProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="relative rounded-3xl bg-gradient-to-r from-[#0b1830] via-[#224183] to-[#0f244a] text-white p-6 sm:p-9 lg:p-11 overflow-hidden shadow-2xl border border-blue-900/50"
+          className="relative rounded-3xl bg-gradient-to-r from-[#0b1830] via-[#077dd3] to-[#0f244a] text-white p-6 sm:p-9 lg:p-11 overflow-hidden shadow-2xl border border-blue-900/50"
         >
           {/* Ambient Background Glows */}
           <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#3b82f6_1.5px,transparent_1.5px)] [background-size:24px_24px] pointer-events-none" />

@@ -187,7 +187,7 @@ export default function FeaturesPage() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col items-center">
           <div className="max-w-3xl space-y-4 text-center">
             <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-2">
-              <span className="text-[#224183] relative inline-block">
+              <span className="text-[#077dd3] relative inline-block">
                 PAKHIMS
                 {/* Animated Hand-Drawn Red Marker Underline SVG */}
                 <motion.svg
@@ -216,7 +216,7 @@ export default function FeaturesPage() {
                   />
                 </motion.svg>
               </span>{" "}
-              <span className="text-[#224183]">Complete</span> <br />
+              <span className="text-[#077dd3]">Complete</span> <br />
               <span className="text-slate-900">8 Modules Showcase.</span>
             </h1>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-sans mx-auto">
@@ -267,13 +267,13 @@ export default function FeaturesPage() {
                       return (
                         <div
                           key={feat.title}
-                          className="flex items-center gap-3.5 p-3.5 sm:p-4 bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:border-[#224183]/60 hover:shadow-md transition-all duration-300 group"
+                          className="flex items-center gap-3.5 p-3.5 sm:p-4 bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:border-[#077dd3]/60 hover:shadow-md transition-all duration-300 group"
                         >
                           <div className="w-10 h-10 rounded-2xl bg-blue-50 border border-blue-100/80 text-[#CE2433] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#CE2433] group-hover:text-white transition-colors duration-300">
                             <Icon className="w-5 h-5" />
                           </div>
                           <div className="min-w-0 flex-1">
-                            <div className="text-xs sm:text-sm font-bold text-slate-900 font-heading group-hover:text-[#224183] transition-colors">
+                            <div className="text-xs sm:text-sm font-bold text-slate-900 font-heading group-hover:text-[#077dd3] transition-colors">
                               {feat.title}
                             </div>
                             <div className="text-xs text-slate-600 font-sans mt-0.5 leading-normal truncate sm:whitespace-normal">
@@ -292,7 +292,7 @@ export default function FeaturesPage() {
                     isImageLeftOnDesktop ? "lg:order-1" : "lg:order-2"
                   }`}
                 >
-                  <MockBrowserWindow showAddressBar={false} title={mod.browserTitle}>
+                  <MockBrowserWindow showAddressBar={false} title={mod.browserTitle} minHeightClass="min-h-0">
                     <img
                       src={mod.image}
                       alt={mod.heading}

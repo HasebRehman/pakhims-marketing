@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-pakhims-blue: #224183;
-  --color-pakhims-blue-dark: #152A56;
-  --color-pakhims-blue-light: #3A62B3;
+  --color-pakhims-blue: #077dd3;
+  --color-pakhims-blue-dark: #0564aa;
+  --color-pakhims-blue-light: #5faae1;
   --color-pakhims-red: #CE2433;
   --color-pakhims-red-hover: #E32D3D;
   --color-pakhims-navy: #0B132B;
@@ -92,13 +92,13 @@ html, body {
 
 /* Gradient Text Utilities */
 .gradient-text-hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #224183 40%, #CE2433 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #077dd3 40%, #CE2433 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-blue {
-  background: linear-gradient(135deg, #0f172a 0%, #224183 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #077dd3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

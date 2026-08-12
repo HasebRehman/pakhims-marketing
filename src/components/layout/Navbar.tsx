@@ -112,8 +112,8 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-in-out ${
         scrolled
-          ? "bg-[#224183]/95 backdrop-blur-md border-b border-blue-900/60 shadow-lg py-2.5 sm:py-3"
-          : "bg-[#224183] border-b border-blue-900/30 shadow-md py-3.5 sm:py-4.5"
+          ? "bg-[#077dd3]/95 backdrop-blur-md border-b border-blue-900/60 shadow-lg py-2.5 sm:py-3"
+          : "bg-[#077dd3] border-b border-blue-900/30 shadow-md py-3.5 sm:py-4.5"
       }`}
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 flex items-center justify-between">

@@ -71,7 +71,7 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-3">
             Simple, Transparent <br />
-            <span className="relative inline-block text-[#224183]">
+            <span className="relative inline-block text-[#077dd3]">
               Hospital Pricing.
               {/* Animated Hand-Drawn Red Marker Underline SVG */}
               <motion.svg
@@ -103,7 +103,7 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-sans">
-            Start with a <strong className="text-[#224183]">1-Month Free Trial</strong>. Select a package for Hospital Care, Labs, or Blood Bank operations with zero hidden fees.
+            Start with a <strong className="text-[#077dd3]">1-Month Free Trial</strong>. Select a package for Hospital Care, Labs, or Blood Bank operations with zero hidden fees.
           </p>
         </div>
         )}
@@ -119,7 +119,7 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
                   onClick={() => setActiveTab(tabKey)}
                   className={`px-5 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm font-bold font-heading rounded-xl transition-all duration-300 ${
                     active
-                      ? "bg-[#224183] text-white shadow-md scale-[1.02]"
+                      ? "bg-[#077dd3] text-white shadow-md scale-[1.02]"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/60"
                   }`}
                 >
@@ -217,12 +217,12 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.05 }}
-            className="bg-white border-2 border-[#224183] rounded-3xl p-7 sm:p-8 flex flex-col justify-between space-y-6 shadow-xl hover:shadow-2xl transition-all duration-300 relative text-left ring-4 ring-blue-500/10"
+            className="bg-white border-2 border-[#077dd3] rounded-3xl p-7 sm:p-8 flex flex-col justify-between space-y-6 shadow-xl hover:shadow-2xl transition-all duration-300 relative text-left ring-4 ring-blue-500/10"
           >
             <div>
               {/* Badge & Plan Name */}
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-blue-50 text-[#224183] border border-blue-200">
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-blue-50 text-[#077dd3] border border-blue-200">
                   SEMI-ANNUAL PACKAGE
                 </span>
               </div>
@@ -237,10 +237,10 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
               {/* Price Display */}
               <div className="mt-6 mb-6 pb-6 border-b border-slate-100">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#224183] font-heading">
+                  <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#077dd3] font-heading">
                     30,000
                   </span>
-                  <span className="text-base font-bold text-[#224183] font-heading">
+                  <span className="text-base font-bold text-[#077dd3] font-heading">
                     PKR
                   </span>
                   <span className="text-xs sm:text-sm text-slate-500 font-medium">
@@ -254,20 +254,20 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
 
               {/* Feature Checklist */}
               <div className="space-y-3">
-                <div className="text-xs font-bold uppercase tracking-wider text-[#224183] font-heading flex items-center gap-1.5">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#077dd3] font-heading flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#CE2433]" />
                   <span>WHAT&apos;S INCLUDED IN {tabsData[activeTab].label.toUpperCase()}:</span>
                 </div>
                 {currentFeatures.map((feat) => (
                   <div key={feat} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 font-sans font-medium">
-                    <div className="w-5 h-5 rounded-full bg-[#224183] text-white flex items-center justify-center shrink-0 shadow-2xs">
+                    <div className="w-5 h-5 rounded-full bg-[#077dd3] text-white flex items-center justify-center shrink-0 shadow-2xs">
                       <Check className="w-3.5 h-3.5" />
                     </div>
                     <span>{feat}</span>
                   </div>
                 ))}
-                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#224183] font-sans font-bold pt-1">
-                  <div className="w-5 h-5 rounded-full bg-[#224183] text-white flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#077dd3] font-sans font-bold pt-1">
+                  <div className="w-5 h-5 rounded-full bg-[#077dd3] text-white flex items-center justify-center shrink-0">
                     <Zap className="w-3.5 h-3.5 text-white" />
                   </div>
                   <span>Free Data Migration & System Onboarding</span>
@@ -279,7 +279,7 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
             <div className="pt-4">
               <button
                 onClick={onOpenDemo}
-                className="w-full py-3.5 sm:py-4 px-6 bg-[#224183] hover:bg-[#1a3366] text-white text-xs sm:text-sm font-bold rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-95"
+                className="w-full py-3.5 sm:py-4 px-6 bg-[#077dd3] hover:bg-[#1a3366] text-white text-xs sm:text-sm font-bold rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-95"
               >
                 <span>Contact Us to Subscribe</span>
                 <ArrowRight className="w-4 h-4" />
@@ -383,7 +383,7 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
 
         {/* Purchasing Process Notice Box */}
         <div className="mt-12 max-w-3xl mx-auto p-6 sm:p-7 bg-slate-50 border border-slate-200/90 rounded-3xl text-center space-y-3 shadow-xs">
-          <div className="text-xs sm:text-sm font-extrabold text-[#224183] font-heading tracking-wide uppercase">
+          <div className="text-xs sm:text-sm font-extrabold text-[#077dd3] font-heading tracking-wide uppercase">
             HOW TO SUBSCRIBE
           </div>
           <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">

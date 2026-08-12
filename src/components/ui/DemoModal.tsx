@@ -118,7 +118,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
     }
   };
 
-  const inputClass = "w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#224183] focus:bg-white text-slate-900";
+  const inputClass = "w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#077dd3] focus:bg-white text-slate-900";
 
   return (
     <>
@@ -140,7 +140,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               transition={{ type: "spring", duration: 0.5 }}
               className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 my-8 flex flex-col max-h-[90vh] sm:max-h-[85vh]"
             >
-              <div className="bg-gradient-to-r from-[#224183] to-[#152A56] p-6 text-white relative shrink-0">
+              <div className="bg-gradient-to-r from-[#077dd3] to-[#0564aa] p-6 text-white relative shrink-0">
                 <button onClick={onClose} className="absolute top-4 right-4 p-2 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-all" aria-label="Close modal">
                   <X className="w-5 h-5" />
                 </button>
@@ -174,7 +174,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Your Role</label>
-                      <select value={formData.role} onChange={(e) => setFormData({ ...formData, role: e.target.value })} className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#224183] focus:bg-white text-slate-900">
+                      <select value={formData.role} onChange={(e) => setFormData({ ...formData, role: e.target.value })} className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#077dd3] focus:bg-white text-slate-900">
                         <option value="Hospital Owner">Hospital Owner / Director</option>
                         <option value="Administrator">Medical Administrator</option>
                         <option value="Medical Director">Medical Director / HOD</option>
@@ -187,7 +187,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                       <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Bed Capacity</label>
                       <div className="relative">
                         <BedDouble className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
-                        <select value={formData.beds} onChange={(e) => setFormData({ ...formData, beds: e.target.value })} className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#224183] focus:bg-white text-slate-900">
+                        <select value={formData.beds} onChange={(e) => setFormData({ ...formData, beds: e.target.value })} className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#077dd3] focus:bg-white text-slate-900">
                           <option value="Under 25 Beds">Under 25 Beds (Clinic / Daycare)</option>
                           <option value="25-50 Beds">25 - 50 Beds</option>
                           <option value="50-100 Beds">50 - 100 Beds</option>
@@ -247,7 +247,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                         const isSelected = formData.modules.includes(mod);
                         return (
                           <button key={mod} type="button" onClick={() => handleModuleToggle(mod)}
-                            className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${isSelected ? "bg-[#224183] text-white border-[#224183]" : "bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300"}`}>
+                            className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${isSelected ? "bg-[#077dd3] text-white border-[#077dd3]" : "bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300"}`}>
                             {isSelected ? "✓ " : "+ "}{mod}
                           </button>
                         );

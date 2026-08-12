@@ -21,7 +21,7 @@ export default function EmployeeAccountsInsurance({ hideCards = false, hideAccou
           <div className="lg:col-span-5 space-y-6 text-left">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
               <span className="inline-block whitespace-nowrap">Know Where Every</span> <br />
-              <span className="text-[#224183] inline-block whitespace-nowrap">Number Comes From.</span>
+              <span className="text-[#077dd3] inline-block whitespace-nowrap">Number Comes From.</span>
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
@@ -35,13 +35,13 @@ export default function EmployeeAccountsInsurance({ hideCards = false, hideAccou
                 return (
                   <div
                     key={item.title}
-                    className="flex items-center gap-3.5 p-3.5 sm:p-4 bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:border-[#224183]/60 hover:shadow-md transition-all duration-300 group"
+                    className="flex items-center gap-3.5 p-3.5 sm:p-4 bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:border-[#077dd3]/60 hover:shadow-md transition-all duration-300 group"
                   >
                     <div className="w-10 h-10 rounded-2xl bg-blue-50 border border-blue-100/80 text-[#CE2433] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#CE2433] group-hover:text-white transition-colors duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="text-xs sm:text-sm font-bold text-slate-900 font-heading group-hover:text-[#224183] transition-colors">
+                      <div className="text-xs sm:text-sm font-bold text-slate-900 font-heading group-hover:text-[#077dd3] transition-colors">
                         {item.title}
                       </div>
                       <div className="text-xs text-slate-600 font-sans mt-0.5 leading-normal truncate sm:whitespace-normal">
@@ -73,8 +73,8 @@ export default function EmployeeAccountsInsurance({ hideCards = false, hideAccou
         {/* Sub-Section 2: Employee RBAC & Insurance Dual Cards Grid — hidden on /features page */}
         {!hideCards && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Card 1: Employee Management (Brand Navy Blue #224183) */}
-          <div className="bg-[#224183] text-white p-8 sm:p-9 rounded-3xl space-y-4 shadow-lg hover:shadow-[0_25px_60px_-15px_rgba(34,65,131,0.55)] hover:-translate-y-2 transition-all duration-300 text-left border border-blue-900/40 group">
+          {/* Card 1: Employee Management (Brand Navy Blue #077dd3) */}
+          <div className="bg-[#077dd3] text-white p-8 sm:p-9 rounded-3xl space-y-4 shadow-lg hover:shadow-[0_25px_60px_-15px_rgba(34,65,131,0.55)] hover:-translate-y-2 transition-all duration-300 text-left border border-blue-900/40 group">
             <div className="w-12 h-12 rounded-2xl bg-white/15 border border-white/20 text-white flex items-center justify-center font-bold shadow-xs transition-transform group-hover:scale-110">
               <UserCheck className="w-6 h-6 text-white" />
             </div>

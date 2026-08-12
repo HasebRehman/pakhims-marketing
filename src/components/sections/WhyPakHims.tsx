@@ -51,7 +51,7 @@ export default function WhyPakHims() {
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-3">
             Why Hospital Owners <br />
             Choose{" "}
-            <span className="relative inline-block text-[#224183]">
+            <span className="relative inline-block text-[#077dd3]">
               PAKHIMS
               {/* Animated Hand-Drawn Red Marker Underline SVG */}
               <motion.svg
@@ -98,7 +98,7 @@ export default function WhyPakHims() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-white border border-slate-200/90 p-7 sm:p-8 rounded-3xl space-y-4 hover:border-[#224183]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group shadow-sm text-left flex flex-col justify-between h-full"
+                className="bg-white border border-slate-200/90 p-7 sm:p-8 rounded-3xl space-y-4 hover:border-[#077dd3]/80 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group shadow-sm text-left flex flex-col justify-between h-full"
               >
                 <div className="space-y-4">
                   {/* Top Header Icon & Tag Badge */}
@@ -112,7 +112,7 @@ export default function WhyPakHims() {
                   </div>
 
                   {/* Bottleneck Title */}
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-heading group-hover:text-[#224183] transition-colors leading-tight">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-heading group-hover:text-[#077dd3] transition-colors leading-tight">
                     {item.bottleneck}
                   </h3>
 

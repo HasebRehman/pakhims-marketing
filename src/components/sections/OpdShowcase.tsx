@@ -21,7 +21,7 @@ export default function OpdShowcase() {
           <div className="lg:col-span-5 space-y-6 text-left">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
               <span className="inline-block whitespace-nowrap">Make Every OPD Visit</span> <br />
-              <span className="text-[#224183]">Simpler and Faster.</span>
+              <span className="text-[#077dd3]">Simpler and Faster.</span>
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
@@ -35,13 +35,13 @@ export default function OpdShowcase() {
                 return (
                   <div
                     key={step.id}
-                    className="flex items-center gap-3.5 p-3.5 sm:p-4 bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:border-[#224183]/60 hover:shadow-md transition-all duration-300 group"
+                    className="flex items-center gap-3.5 p-3.5 sm:p-4 bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:border-[#077dd3]/60 hover:shadow-md transition-all duration-300 group"
                   >
                     <div className="w-10 h-10 rounded-2xl bg-blue-50 border border-blue-100/80 text-[#CE2433] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#CE2433] group-hover:text-white transition-colors duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="text-xs sm:text-sm font-bold text-slate-900 font-heading group-hover:text-[#224183] transition-colors">
+                      <div className="text-xs sm:text-sm font-bold text-slate-900 font-heading group-hover:text-[#077dd3] transition-colors">
                         {step.name}
                       </div>
                       <div className="text-xs text-slate-600 font-sans mt-0.5 leading-normal truncate sm:whitespace-normal">

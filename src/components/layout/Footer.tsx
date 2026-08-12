@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Smartphone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface FooterProps {
   onOpenDemo: () => void;
@@ -9,9 +9,9 @@ interface FooterProps {
 
 export default function Footer({ onOpenDemo }: FooterProps) {
   return (
-    <footer className="bg-[#0b1329] text-slate-400 border-t border-slate-800/80 pt-16 pb-12 font-sans relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-slate-800/70">
+    <footer className="bg-[#077dd3] text-blue-100 border-t border-white/15 pt-16 pb-12 font-sans relative">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/15">
           
           {/* Brand Info (Cols 1-4) */}
           <div className="lg:col-span-4 space-y-4">
@@ -23,7 +23,7 @@ export default function Footer({ onOpenDemo }: FooterProps) {
               />
             </Link>
 
-            <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-md font-sans">
+            <p className="text-sm sm:text-base text-blue-50/85 leading-relaxed max-w-md font-sans">
               PAKHIMS simplifies hospital operations into one connected digital environment—managing OPD, IPD, Doctor Accounts, Billing, and Staff Permissions with 24/7 Apni Appointment sync.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function Footer({ onOpenDemo }: FooterProps) {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-white transition-colors duration-200 block py-0.5"
+                    className="text-blue-100/80 hover:text-white transition-colors duration-200 block py-0.5"
                   >
                     {item.name}
                   </Link>
@@ -71,7 +71,7 @@ export default function Footer({ onOpenDemo }: FooterProps) {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-white transition-colors duration-200 block py-0.5"
+                    className="text-blue-100/80 hover:text-white transition-colors duration-200 block py-0.5"
                   >
                     {item.name}
                   </Link>
@@ -85,7 +85,7 @@ export default function Footer({ onOpenDemo }: FooterProps) {
             <h4 className="text-lg sm:text-xl font-bold text-white font-heading tracking-wide">
               Patient Mobile App
             </h4>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-sans">
+            <p className="text-xs sm:text-sm text-blue-50/85 leading-relaxed font-sans">
               Patients can book doctor appointments 24/7 via the <strong className="text-white">Apni Appointment</strong> mobile app, synced live with your PAKHIMS hospital records.
             </p>
 
@@ -106,7 +106,7 @@ export default function Footer({ onOpenDemo }: FooterProps) {
                 href="https://play.google.com/store/search?q=apni%20appointment&c=apps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-black hover:bg-slate-900 border border-slate-700/90 hover:border-slate-500 rounded-xl text-white transition-all duration-200 shadow-md group hover:scale-[1.02] active:scale-95"
+                className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-slate-950 hover:bg-slate-900 border border-white/10 rounded-xl text-white transition-all duration-200 shadow-md group hover:scale-[1.02] active:scale-95"
               >
                 {/* Official Google Play Icon SVG */}
                 <svg className="w-6.5 h-6.5 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,16 +125,16 @@ export default function Footer({ onOpenDemo }: FooterProps) {
         </div>
 
         {/* Bottom Credits */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-blue-200/70 gap-4">
           <p>© {new Date().getFullYear()} PAKHIMS Hospital Management Platform. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-slate-400 transition-colors">
+            <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-slate-400 transition-colors">
+            <a href="#" className="hover:text-white transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-slate-400 transition-colors">
+            <a href="#" className="hover:text-white transition-colors">
               System Security
             </a>
           </div>

@@ -12,6 +12,7 @@ interface MockBrowserWindowProps {
   showDepth?: boolean;
   showServerStatus?: boolean;
   showAddressBar?: boolean;
+  minHeightClass?: string;
 }
 
 export default function MockBrowserWindow({
@@ -23,6 +24,7 @@ export default function MockBrowserWindow({
   showDepth = true,
   showServerStatus = false,
   showAddressBar = true,
+  minHeightClass = "min-h-[380px]",
 }: MockBrowserWindowProps) {
   return (
     <div
@@ -54,7 +56,7 @@ export default function MockBrowserWindow({
         {/* Status Badge */}
         {badgeText && (
           <div className="hidden sm:flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#224183]/10 text-[#224183] border border-[#224183]/20">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#077dd3]/10 text-[#077dd3] border border-[#077dd3]/20">
               <CheckCircle className="w-3 h-3 text-[#CE2433]" />
               {badgeText}
             </span>
@@ -80,7 +82,7 @@ export default function MockBrowserWindow({
       </div>
 
       {/* Main Screen Container */}
-      <div className="relative bg-slate-50 p-2 sm:p-4 overflow-hidden min-h-[380px]">
+      <div className={`relative bg-slate-50 p-2 sm:p-4 overflow-hidden ${minHeightClass}`}>
         {children}
       </div>
     </div>

@@ -84,7 +84,7 @@ export default function ProductEcosystem() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
             Everything Your Hospital Needs. <br />
-            <span className="text-[#224183]">Connected in One Platform.</span>
+            <span className="text-[#077dd3]">Connected in One Platform.</span>
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-sans">
@@ -103,11 +103,11 @@ export default function ProductEcosystem() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="p-6 sm:p-7 rounded-3xl border border-slate-200/90 bg-white text-slate-800 flex flex-col justify-start space-y-4 h-full group hover:-translate-y-1 hover:border-[#224183] hover:shadow-xl transition-all duration-300"
+                className="p-6 sm:p-7 rounded-3xl border border-slate-200/90 bg-white text-slate-800 flex flex-col justify-start space-y-4 h-full group hover:-translate-y-1 hover:border-[#077dd3] hover:shadow-xl transition-all duration-300"
               >
                 {/* Header Icon & Tag Badge */}
                 <div className="flex items-center justify-between">
-                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center font-bold bg-blue-50 text-[#224183] border border-blue-100/80 group-hover:bg-[#CE2433] group-hover:text-white group-hover:border-transparent transition-all duration-300 shadow-2xs group-hover:scale-105">
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center font-bold bg-blue-50 text-[#077dd3] border border-blue-100/80 group-hover:bg-[#CE2433] group-hover:text-white group-hover:border-transparent transition-all duration-300 shadow-2xs group-hover:scale-105">
                     <Icon className="w-5.5 h-5.5" />
                   </div>
                   <span className="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-slate-100/80 text-slate-600 border border-slate-200/80">
@@ -117,7 +117,7 @@ export default function ProductEcosystem() {
 
                 {/* Title & Description */}
                 <div className="space-y-1.5 flex-1 flex flex-col justify-start">
-                  <h3 className="font-bold text-base sm:text-lg text-slate-900 group-hover:text-[#224183] transition-colors font-heading leading-tight min-h-[2.75rem] flex items-center">
+                  <h3 className="font-bold text-base sm:text-lg text-slate-900 group-hover:text-[#077dd3] transition-colors font-heading leading-tight min-h-[2.75rem] flex items-center">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">

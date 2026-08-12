@@ -30,7 +30,7 @@ export default function ProblemSolution() {
       icon: DollarSign,
       title: "Un-tracked Revenue & Doctor Shares",
       desc: "Calculating doctor percentages manually in Excel leads to disputes and missed financial accounting.",
-      iconBg: "bg-blue-50 text-[#224183] border-blue-100",
+      iconBg: "bg-blue-50 text-[#077dd3] border-blue-100",
     },
     {
       icon: ShieldAlert,
@@ -50,7 +50,7 @@ export default function ProblemSolution() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-16">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl pt-2 sm:pt-14 font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
             Hospital Management <br />
-            <span className="text-[#224183]">Shouldn&apos;t Be Complicated.</span>
+            <span className="text-[#077dd3]">Shouldn&apos;t Be Complicated.</span>
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-sans">
@@ -69,13 +69,13 @@ export default function ProblemSolution() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-slate-50 border border-slate-200/90 p-6 sm:p-7 rounded-3xl relative group hover:border-[#224183] hover:bg-white hover:shadow-[0_20px_45px_-10px_rgba(34,65,131,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                className="bg-slate-50 border border-slate-200/90 p-6 sm:p-7 rounded-3xl relative group hover:border-[#077dd3] hover:bg-white hover:shadow-[0_20px_45px_-10px_rgba(34,65,131,0.18)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className={`w-12 h-12 rounded-2xl border ${item.iconBg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-2xs`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 font-heading group-hover:text-[#224183] transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 font-heading group-hover:text-[#077dd3] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
@@ -109,9 +109,9 @@ export default function ProblemSolution() {
                 <span>THE PAKHIMS SOLUTION</span>
               </span>
 
-              <h3 className="text-2xl sm:text-4xl font-extrabold text-[#224183] tracking-tight font-heading leading-tight">
+              <h3 className="text-2xl sm:text-4xl font-extrabold text-[#077dd3] tracking-tight font-heading leading-tight">
                 Meet{" "}
-                <span className="relative inline-block text-[#224183]">
+                <span className="relative inline-block text-[#077dd3]">
                   PAKHIMS
                   {/* Animated Hand-Drawn Red Marker Underline SVG */}
                   <motion.svg
@@ -150,7 +150,7 @@ export default function ProblemSolution() {
               {/* Stats Highlights inside White Boxes */}
               <div className="pt-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <div className="p-4 bg-white border border-slate-200/80 rounded-2xl shadow-xs">
-                  <div className="text-2xl sm:text-3xl font-black text-[#224183] font-mono">100%</div>
+                  <div className="text-2xl sm:text-3xl font-black text-[#077dd3] font-mono">100%</div>
                   <div className="text-xs text-slate-600 font-medium mt-1">Digital Record Traceability</div>
                 </div>
                 <div className="p-4 bg-white border border-slate-200/80 rounded-2xl shadow-xs">
