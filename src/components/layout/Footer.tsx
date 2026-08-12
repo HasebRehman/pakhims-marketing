@@ -38,9 +38,10 @@ export default function Footer({ onOpenDemo }: FooterProps) {
                 { name: "Apni Appointment Sync", href: "/features#appointment" },
                 { name: "OPD & Token Management", href: "/features#opd" },
                 { name: "IPD & Patient Care", href: "/features#ipd" },
-                { name: "Central Billing Engine", href: "/features#billing" },
+                { name: "Lab & Pathology", href: "/features#lab" },
                 { name: "Doctor Revenue Accounts", href: "/features#accounts" },
-                { name: "Insurance Panel Tracking", href: "/features#insurance" },
+                { name: "Employee & Security", href: "/features#employee" },
+                { name: "Blood Bank Operations", href: "/features#bloodbank" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -63,7 +64,8 @@ export default function Footer({ onOpenDemo }: FooterProps) {
               {[
                 { name: "Overview", href: "/#hero" },
                 { name: "Signature Core", href: "/#signature" },
-                { name: "Detailed Features", href: "/features" },
+                { name: "Ecosystem", href: "/#ecosystem" },
+                { name: "Online Appointment", href: "/#online-appointments" },
                 { name: "Interactive Demo", href: "/#demo" },
                 { name: "Why PAKHIMS", href: "/#why-pakhims" },
                 { name: "Pricing", href: "/pricing" },
@@ -128,15 +130,12 @@ export default function Footer({ onOpenDemo }: FooterProps) {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-blue-200/70 gap-4">
           <p>© {new Date().getFullYear()} PAKHIMS Hospital Management Platform. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              System Security
-            </a>
+            </Link>
           </div>
         </div>
       </div>

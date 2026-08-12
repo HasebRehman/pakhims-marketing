@@ -46,7 +46,7 @@ export default function FeaturesPage() {
       tagColor: "bg-sky-600 text-white font-bold shadow-xs border-0",
       heading: "Smart 24/7 Patient Booking & Scheduling.",
       description: "Provide your patients with a seamless online appointment booking experience while keeping your OPD schedule perfectly organized.",
-      image: "/img/dashboards/apni-appointment-dashboard.png",
+      image: "/img/tab-img/online-appointment.png",
       url: "app.pakhims.com/appointments/online",
       browserTitle: "PAKHIMS Online Doctor Appointment Portal",
       highlights: [
@@ -63,7 +63,7 @@ export default function FeaturesPage() {
       tagColor: "bg-indigo-600 text-white font-bold shadow-xs border-0",
       heading: "Keep Your Hospital Team Organized & Secure.",
       description: "Add staff members, assign Role-Based Access Control (RBAC), and define exact screen permissions for doctors, nurses, accountants, receptionists, and administrators.",
-      image: "/img/dashboards/employee-dashboard.png",
+      image: "/img/tab-img/employee.png",
       url: "app.pakhims.com/employee/rbac",
       browserTitle: "PAKHIMS Staff Security & Role Management",
       highlights: [
@@ -73,31 +73,14 @@ export default function FeaturesPage() {
         { title: "Multi-Department Security", desc: "Ensure receptionists, nurses, and accountants only access data relevant to their duty.", icon: ShieldCheck },
       ],
     },
-    // 3. Insurance (Desktop: Image LEFT, Content RIGHT)
-    {
-      id: "insurance",
-      tag: "INSURANCE & PANELS",
-      tagColor: "bg-rose-600 text-white font-bold shadow-xs border-0",
-      heading: "Make Insurance & Panel Claims Effortless.",
-      description: "Seamlessly handle panel patients, verify policy coverage status, record pre-approvals, generate panel invoices, and track claim payments.",
-      image: "/img/dashboards/insurance-dashboard.png",
-      url: "app.pakhims.com/insurance/panels",
-      browserTitle: "PAKHIMS Insurance & Panel Claim Verification",
-      highlights: [
-        { title: "Instant Panel Eligibility Check", desc: "Verify policy active status, deductible caps, and coverage limits before doctor consultation.", icon: ShieldCheck },
-        { title: "Pre-Approval Record Tracking", desc: "Attach insurance authorization letters and claim reference numbers directly to patient MRN.", icon: FileCheck },
-        { title: "Panel-Compliant Receipt Formatting", desc: "Auto-generate itemized receipts formatted specifically for corporate and insurance claim submission.", icon: FileText },
-        { title: "Reconciliation Ledger", desc: "Track pending panel payouts, received claims, and outstanding institutional balances.", icon: TrendingUp },
-      ],
-    },
-    // 4. Accounts (Desktop: Content LEFT, Image RIGHT)
+    // 3. Accounts (Desktop: Content LEFT, Image RIGHT)
     {
       id: "accounts",
       tag: "DOCTOR ACCOUNTS",
       tagColor: "bg-emerald-600 text-white font-bold shadow-xs border-0",
       heading: "Know Where Every Number Comes From.",
       description: "Eliminate revenue disputes between hospital owners and consultant doctors. PAKHIMS automatically calculates earnings based on your specific doctor agreements.",
-      image: "/img/dashboards/accounts-dashboard.png",
+      image: "/img/tab-img/accounts.png",
       url: "app.pakhims.com/accounts/doctor-ledger",
       browserTitle: "PAKHIMS Doctor Share Ledger & Revenue Allocation",
       highlights: [
@@ -107,14 +90,14 @@ export default function FeaturesPage() {
         { title: "Automated Revenue Ledger", desc: "Generate transparent monthly payout statements and instant printable doctor revenue slips.", icon: FileText },
       ],
     },
-    // 5. Lab (Desktop: Image LEFT, Content RIGHT)
+    // 4. Lab (Desktop: Image LEFT, Content RIGHT)
     {
       id: "lab",
       tag: "LAB & PATHOLOGY",
       tagColor: "bg-teal-600 text-white font-bold shadow-xs border-0",
       heading: "Fast, Error-Free Diagnostic & Lab Operations.",
       description: "Streamline pathology test ordering, sample barcode tracking, result entry, and report printing in your hospital laboratory.",
-      image: "/img/dashboards/lab-dashboard.png",
+      image: "/img/tab-img/lab.png",
       url: "app.pakhims.com/lab/diagnostics",
       browserTitle: "PAKHIMS Laboratory Diagnostics & Pathology Engine",
       highlights: [
@@ -124,14 +107,14 @@ export default function FeaturesPage() {
         { title: "Dedicated Lab Billing & MRN", desc: "Dedicated lab billing engine with instant diagnostic receipts linked directly under patient MRN.", icon: CheckCircle2 },
       ],
     },
-    // 6. OPD (Desktop: Content LEFT, Image RIGHT)
+    // 5. OPD (Desktop: Content LEFT, Image RIGHT)
     {
       id: "opd",
       tag: "OPD & TOKENS",
       tagColor: "bg-blue-600 text-white font-bold shadow-xs border-0",
       heading: "Make Every OPD Visit Simpler and Faster.",
       description: "From initial token generation at reception to digital doctor prescription entry and checkout billing, handle high-volume patient queues with zero friction.",
-      image: "/img/dashboards/opd-dashboard.png",
+      image: "/img/tab-img/opd.png",
       url: "app.pakhims.com/opd/queue",
       browserTitle: "PAKHIMS OPD Token & Consultation Station",
       highlights: [
@@ -141,14 +124,14 @@ export default function FeaturesPage() {
         { title: "Instant OPD Checkout", desc: "Auto-calculates consultation and procedure fees at checkout with 0 manual typing.", icon: CheckCircle2 },
       ],
     },
-    // 7. IPD (Desktop: Image LEFT, Content RIGHT)
+    // 6. IPD (Desktop: Image LEFT, Content RIGHT)
     {
       id: "ipd",
       tag: "IPD & WARDS",
       tagColor: "bg-purple-600 text-white font-bold shadow-xs border-0",
       heading: "Manage the Complete Admitted Patient Journey.",
       description: "Track admitted patients from ward bed assignment, daily nursing care logs, surgery records, doctor round notes to final discharge summaries.",
-      image: "/img/dashboards/ipd-dashboard.png",
+      image: "/img/tab-img/ipd.png",
       url: "app.pakhims.com/ipd/admissions",
       browserTitle: "PAKHIMS IPD Ward & Bed Management Engine",
       highlights: [
@@ -158,14 +141,14 @@ export default function FeaturesPage() {
         { title: "Automated Discharge Summaries", desc: "Auto-compiles admission history, lab reports, and vitals into clean discharge documentation.", icon: Award },
       ],
     },
-    // 8. Blood Bank (Desktop: Content LEFT, Image RIGHT)
+    // 7. Blood Bank (Desktop: Content LEFT, Image RIGHT)
     {
       id: "bloodbank",
       tag: "BLOOD BANK",
       tagColor: "bg-[#CE2433] text-white font-bold shadow-xs border-0",
       heading: "A Smarter Way to Manage Your Hospital Blood Bank.",
       description: "Track blood bags from volunteer collection, 5-marker laboratory screening, cross-matching, barcode sticker generation to emergency issuance.",
-      image: "/img/dashboards/blood-bank-dashboard.png",
+      image: "/img/tab-img/blood-bank.png",
       url: "app.pakhims.com/bloodbank/inventory",
       browserTitle: "PAKHIMS Blood Bank Operations & Barcode Generator",
       highlights: [

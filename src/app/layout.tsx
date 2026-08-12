@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
-import PageLoader from "@/components/ui/PageLoader";
+
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -73,7 +73,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/img/favicon.png" />
       </head>
       <body className="bg-white text-[#0B1528] antialiased selection:bg-[#CE2433] selection:text-white font-sans">
-        <PageLoader />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>

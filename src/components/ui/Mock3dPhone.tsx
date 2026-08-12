@@ -34,7 +34,7 @@ export default function Mock3dPhone({ className = "" }: Mock3dPhoneProps) {
         {/* Phone Screen — Real Screenshot */}
         <div className="w-full h-[470px] rounded-b-[32px] overflow-hidden relative border border-slate-800">
           <img
-            src="/img/apniAppointment-mobile.png"
+            src="/img/pakhims-mobile.png"
             alt="Apni Appointment Mobile App Screenshot"
             className="w-full h-full object-cover object-top"
           />

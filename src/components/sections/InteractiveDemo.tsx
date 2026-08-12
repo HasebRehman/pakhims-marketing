@@ -30,7 +30,6 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
     { id: "bloodbank", label: "Blood Bank", icon: Droplet, url: "app.pakhims.com/bloodbank/stock" },
     { id: "billing", label: "Billing", icon: FileText, url: "app.pakhims.com/billing/receipts" },
     { id: "accounts", label: "Doctor Accounts", icon: DollarSign, url: "app.pakhims.com/accounts/ledger" },
-    { id: "insurance", label: "Insurance", icon: ShieldCheck, url: "app.pakhims.com/insurance/panels" },
     { id: "employee", label: "Employee", icon: UserCheck, url: "app.pakhims.com/employee/rbac" },
   ];
 
@@ -117,63 +116,57 @@ export default function InteractiveDemo({}: InteractiveDemoProps) {
               >
                 {activeTab === "appointment" && (
                   <img
-                    src="/img/dashboards/appointment-dashboard.png"
+                    src="/img/tab-img/appointments.png"
                     alt="PAKHIMS Appointments Scheduling"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "opd" && (
                   <img
-                    src="/img/dashboards/opd-dashboard.png"
+                    src="/img/tab-img/opd.png"
                     alt="PAKHIMS OPD & Token Management System"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "lab" && (
                   <img
-                    src="/img/dashboards/lab-dashboard.png"
+                    src="/img/tab-img/lab.png"
                     alt="PAKHIMS Lab & Diagnostic Test Catalog"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "ipd" && (
                   <img
-                    src="/img/dashboards/ipd-dashboard.png"
+                    src="/img/tab-img/ipd.png"
                     alt="PAKHIMS IPD Ward & Bed Care Management"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "bloodbank" && (
                   <img
-                    src="/img/dashboards/blood-bank-dashboard.png"
+                    src="/img/tab-img/blood-bank.png"
                     alt="PAKHIMS Blood Bank Operations"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "billing" && (
                   <img
-                    src="/img/dashboards/billing-dashboard.png"
+                    src="/img/tab-img/billing.png"
                     alt="PAKHIMS Billing"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
                 {activeTab === "accounts" && (
                   <img
-                    src="/img/dashboards/accounts-dashboard.png"
+                    src="/img/tab-img/accounts.png"
                     alt="PAKHIMS Doctor Revenue Accounts & Ledger"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
                 )}
-                {activeTab === "insurance" && (
-                  <img
-                    src="/img/dashboards/insurance-dashboard.png"
-                    alt="PAKHIMS Insurance & Panel Claim Verification"
-                    className="w-full h-auto object-cover rounded-xl shadow-xs"
-                  />
-                )}
+
                 {activeTab === "employee" && (
                   <img
-                    src="/img/dashboards/employee-dashboard.png"
+                    src="/img/tab-img/employee.png"
                     alt="PAKHIMS Employee RBAC & Role Management"
                     className="w-full h-auto object-cover rounded-xl shadow-xs"
                   />
