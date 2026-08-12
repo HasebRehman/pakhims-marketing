@@ -8,7 +8,7 @@ export default function Mock3dPhone({ className = "" }: Mock3dPhoneProps) {
 
   return (
     <a
-      href="https://play.google.com/store/search?q=apni%20appointment&c=apps"
+      href="https://play.google.com/store/apps/details?id=com.mumerch.pakhims"
       target="_blank"
       rel="noopener noreferrer"
       className={`relative phone-3d-tilt z-30 group/phone block cursor-pointer hover:scale-[1.02] active:scale-98 transition-all ${className}`}
@@ -34,8 +34,8 @@ export default function Mock3dPhone({ className = "" }: Mock3dPhoneProps) {
         {/* Phone Screen — Real Screenshot */}
         <div className="w-full h-[470px] rounded-b-[32px] overflow-hidden relative border border-slate-800">
           <img
-            src="/img/pakhims-mobile.png"
-            alt="Apni Appointment Mobile App Screenshot"
+            src="/img/pakhims-app.png"
+            alt="PAKHIMS Mobile App Screenshot"
             className="w-full h-full object-cover object-top"
           />
         </div>
