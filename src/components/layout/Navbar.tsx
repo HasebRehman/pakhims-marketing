@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, LogIn } from "lucide-react";
 
 interface NavbarProps {
-  onOpenDemo: () => void;
+  onOpenDemo?: () => void;
 }
 
-export default function Navbar({ onOpenDemo }: NavbarProps) {
+export default function Navbar(_props: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("hero");
@@ -166,13 +166,15 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
 
         {/* Action Button */}
         <div className="hidden sm:flex items-center gap-3">
-          <button
-            onClick={onOpenDemo}
+          <a
+            href="https://pakhims.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-[#CE2433] hover:bg-[#E32D3D] text-white text-xs font-bold rounded-full shadow-md shadow-red-950/40 flex items-center gap-2 transition-all hover:scale-105 active:scale-95 border border-red-400/30"
           >
-            <span>Request Free Demo</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+            <span>Login</span>
+            <LogIn className="w-3.5 h-3.5" />
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -216,16 +218,16 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
                 );
               })}
               <div className="pt-2">
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    onOpenDemo();
-                  }}
+                <a
+                  href="https://pakhims.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="w-full py-3 bg-[#CE2433] text-white text-sm font-bold rounded-xl flex items-center justify-center gap-2 shadow-md shadow-red-950/30"
                 >
-                  <span>Request Free Demo</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                  <span>Login</span>
+                  <LogIn className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </motion.div>
