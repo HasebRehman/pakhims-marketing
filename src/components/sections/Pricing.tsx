@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import { Check, Sparkles, ArrowRight, ShieldCheck, Zap } from "lucide-react";
 
 interface PricingProps {
-  onOpenDemo?: () => void;
+  onOpenDemo?: (planDetails?: string) => void;
   hideHeader?: boolean;
 }
 
-type TabType = "hospital" | "labs" | "blood-bank";
+type TabType = "hospital" | "labs" | "blood-bank" | "full-access";
 
 export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps) {
   const [activeTab, setActiveTab] = useState<TabType>("hospital");
@@ -54,6 +54,155 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
         "24/7 Priority Technical Support",
       ],
     },
+    "full-access": {
+      label: "Full Access",
+      badge: "COMPLETE ALL-IN-ONE SUITE",
+      features: [
+        "ALL Hospital Care features (OPD, IPD, MRN & Billing)",
+        "ALL Labs features (Pathology Catalog & Barcode Tracking)",
+        "ALL Blood Bank features (Donor Reg & Bag Stock Engine)",
+        "Unified Multi-Department Dashboard & Integration",
+        "Reconciled Doctor Accounts & Share Ledger features",
+        "Centralized Analytics & Hospital-wide Reporting",
+        "24/7 Priority Technical Support",
+      ],
+    },
+  };
+
+  interface CardConfig {
+    price: string;
+    original: string | null;
+    ribbon?: string;
+    badgeLeft: string;
+    badgeRight: string;
+    discount?: string;
+    subtext: string;
+    buttonText?: string | null;
+  }
+
+  interface PlanConfig {
+    card1: CardConfig;
+    card2: CardConfig;
+    card3: CardConfig;
+  }
+
+  const plansData: Record<TabType, PlanConfig> = {
+    hospital: {
+      card1: {
+        price: "6,000",
+        original: null,
+        badgeLeft: "1-MONTH PLAN",
+        badgeRight: "3 Months Free",
+        buttonText: "Start 3-Month Free Trial",
+        subtext: "3 Months Free Trial • No credit card required"
+      },
+      card2: {
+        price: "30,000",
+        original: "36,000",
+        ribbon: "SAVE 6,000 PKR • 17% SAVINGS",
+        badgeLeft: "SEMI-ANNUAL PLAN",
+        badgeRight: "17% Saved",
+        discount: "Save 6,000 PKR (17% Off)",
+        subtext: "3 Months Free Trial Included"
+      },
+      card3: {
+        price: "50,000",
+        original: "72,000",
+        ribbon: "SAVE 22,000 PKR • 31% SAVINGS",
+        badgeLeft: "ANNUAL PLAN",
+        badgeRight: "31% Saved",
+        discount: "Save 22,000 PKR (31% Off)",
+        subtext: "3 Months Free Trial Included",
+        buttonText: "Contact Us for 22,000 PKR Discount"
+      }
+    },
+    labs: {
+      card1: {
+        price: "6,000",
+        original: null,
+        badgeLeft: "1-MONTH PLAN",
+        badgeRight: "3 Months Free",
+        buttonText: "Start 3-Month Free Trial",
+        subtext: "3 Months Free Trial • No credit card required"
+      },
+      card2: {
+        price: "30,000",
+        original: "36,000",
+        ribbon: "SAVE 6,000 PKR • 17% SAVINGS",
+        badgeLeft: "SEMI-ANNUAL PLAN",
+        badgeRight: "17% Saved",
+        discount: "Save 6,000 PKR (17% Off)",
+        subtext: "3 Months Free Trial Included"
+      },
+      card3: {
+        price: "50,000",
+        original: "72,000",
+        ribbon: "SAVE 22,000 PKR • 31% SAVINGS",
+        badgeLeft: "ANNUAL PLAN",
+        badgeRight: "31% Saved",
+        discount: "Save 22,000 PKR (31% Off)",
+        subtext: "3 Months Free Trial Included",
+        buttonText: "Contact Us for 22,000 PKR Discount"
+      }
+    },
+    "blood-bank": {
+      card1: {
+        price: "6,000",
+        original: null,
+        badgeLeft: "1-MONTH PLAN",
+        badgeRight: "3 Months Free",
+        buttonText: "Start 3-Month Free Trial",
+        subtext: "3 Months Free Trial • No credit card required"
+      },
+      card2: {
+        price: "30,000",
+        original: "36,000",
+        ribbon: "SAVE 6,000 PKR • 17% SAVINGS",
+        badgeLeft: "SEMI-ANNUAL PLAN",
+        badgeRight: "17% Saved",
+        discount: "Save 6,000 PKR (17% Off)",
+        subtext: "3 Months Free Trial Included"
+      },
+      card3: {
+        price: "50,000",
+        original: "72,000",
+        ribbon: "SAVE 22,000 PKR • 31% SAVINGS",
+        badgeLeft: "ANNUAL PLAN",
+        badgeRight: "31% Saved",
+        discount: "Save 22,000 PKR (31% Off)",
+        subtext: "3 Months Free Trial Included",
+        buttonText: "Contact Us for 22,000 PKR Discount"
+      }
+    },
+    "full-access": {
+      card1: {
+        price: "15,000",
+        original: "18,000",
+        badgeLeft: "1-MONTH PLAN",
+        badgeRight: "3 Months Free",
+        buttonText: "Start 3-Month Free Trial",
+        subtext: "3 Months Free Trial • No credit card required"
+      },
+      card2: {
+        price: "72,000",
+        original: "90,000",
+        ribbon: "SAVE 18,000 PKR • 20% SAVINGS",
+        badgeLeft: "SEMI-ANNUAL PLAN",
+        badgeRight: "20% Saved",
+        discount: "Save 18,000 PKR (20% Off)",
+        subtext: "3 Months Free Trial Included"
+      },
+      card3: {
+        price: "120,000",
+        original: "180,000",
+        ribbon: "SAVE 60,000 PKR • 33% SAVINGS",
+        badgeLeft: "ANNUAL PLAN",
+        badgeRight: "33% Saved",
+        discount: "Save 60,000 PKR (33% Off)",
+        subtext: "3 Months Free Trial Included",
+        buttonText: "Contact Us for 60,000 PKR Discount"
+      }
+    }
   };
 
   const currentFeatures = tabsData[activeTab].features;
@@ -66,9 +215,9 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold font-mono">
             <Sparkles className="w-4 h-4 text-[#CE2433]" />
-            <span>1-MONTH FREE TRIAL AVAILABLE</span>
+            <span>3-MONTH FREE TRIAL AVAILABLE</span>
           </div>
-
+ 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight pb-3">
             Simple, Transparent <br />
             <span className="relative inline-block text-[#077dd3]">
@@ -101,17 +250,17 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
               </motion.svg>
             </span>
           </h2>
-
+ 
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-sans">
-            Start with a <strong className="text-[#077dd3]">1-Month Free Trial</strong>. Select a package for Hospital Care, Labs, or Blood Bank operations with zero hidden fees.
+            Start with a <strong className="text-[#077dd3]">3-Month Free Trial</strong>. Select a package for Hospital Care, Labs, or Blood Bank operations with zero hidden fees.
           </p>
         </div>
         )}
-
+ 
         {/* Interactive Pricing Tabs Switcher */}
         <div className="flex items-center justify-center mb-10 sm:mb-12">
           <div className="inline-flex p-1.5 bg-slate-100/90 rounded-2xl border border-slate-200/90 shadow-inner gap-1">
-            {(["hospital", "labs", "blood-bank"] as const).map((tabKey) => {
+            {(["hospital", "labs", "blood-bank", "full-access"] as const).map((tabKey) => {
               const active = activeTab === tabKey;
               return (
                 <button
@@ -132,7 +281,7 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
 
         {/* 3 Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
-          {/* Card 1: 1-Month Free Trial Plan */}
+          {/* Card 1: 1-Month Plan with 3-Month Free Trial */}
           <motion.div
             key={`card1-${activeTab}`}
             initial={{ opacity: 0, y: 15 }}
@@ -143,43 +292,53 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
             {/* Free Trial Ribbon Badge */}
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[11px] font-extrabold px-4 py-1 rounded-full shadow-md flex items-center gap-1.5 whitespace-nowrap tracking-wide border border-emerald-400/40">
               <Sparkles className="w-3.5 h-3.5 fill-white" />
-              1-MONTH FREE TRIAL
+              3-MONTH FREE TRIAL
             </div>
 
             <div>
               {/* Badge & Plan Name */}
               <div className="flex items-center justify-between mb-4 pt-1">
                 <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
-                  FREE TRIAL
+                  {plansData[activeTab].card1.badgeLeft}
                 </span>
                 <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-                  100% Free
+                  {plansData[activeTab].card1.badgeRight}
                 </span>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
-                1-Month Free Trial
+                1-Month Plan
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 font-sans mt-1">
-                Get 1 full month of free access to try PAKHIMS {tabsData[activeTab].label} with zero commitment.
+                Get 3 full months of free trial access to try PAKHIMS {tabsData[activeTab].label} with zero commitment.
               </p>
 
               {/* Price Display */}
               <div className="mt-6 mb-6 pb-6 border-b border-slate-100">
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-700 font-heading">
-                    FREE
+                    {plansData[activeTab].card1.price}
                   </span>
                   <span className="text-base font-bold text-emerald-800 font-heading">
-                    TRIAL
+                    PKR
                   </span>
                   <span className="text-xs sm:text-sm text-slate-500 font-medium">
-                    / 1st month
+                    / month
                   </span>
                 </div>
+                {plansData[activeTab].card1.original && (
+                  <div className="flex items-center gap-2 mt-1.5">
+                    <span className="text-xs text-red-500 line-through font-mono font-bold">
+                      {plansData[activeTab].card1.original} PKR
+                    </span>
+                    <span className="text-xs font-bold text-emerald-700 font-mono bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                      Save 3,000 PKR (17% Off)
+                    </span>
+                  </div>
+                )}
                 <div className="text-xs text-emerald-700 font-mono font-semibold mt-1 flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>100% Free • No credit card required</span>
+                  <span>{plansData[activeTab].card1.subtext}</span>
                 </div>
               </div>
 
@@ -202,16 +361,16 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
             {/* CTA Button */}
             <div className="pt-4">
               <button
-                onClick={onOpenDemo}
+                onClick={() => onOpenDemo?.(`${tabsData[activeTab].label} - 1-Month Plan (${plansData[activeTab].card1.price} PKR)`)}
                 className="w-full py-3.5 sm:py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-2xl shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-95 border border-emerald-400/40"
               >
-                <span>Start 1-Month Free Trial</span>
+                <span>{plansData[activeTab].card1.buttonText}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </motion.div>
 
-          {/* Card 2: 6-Month Package Plan */}
+          {/* Card 2: 6-Month Plan */}
           <motion.div
             key={`card2-${activeTab}`}
             initial={{ opacity: 0, y: 15 }}
@@ -219,26 +378,35 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
             transition={{ duration: 0.3, delay: 0.05 }}
             className="bg-white border-2 border-[#077dd3] rounded-3xl p-7 sm:p-8 flex flex-col justify-between space-y-6 shadow-xl hover:shadow-2xl transition-all duration-300 relative text-left ring-4 ring-blue-500/10"
           >
+            {/* 6-Month Offer Ribbon Badge */}
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#077dd3] text-white text-[11px] font-extrabold px-4 py-1 rounded-full shadow-md flex items-center gap-1.5 whitespace-nowrap tracking-wide border border-blue-400/40">
+              <Sparkles className="w-3.5 h-3.5 fill-white" />
+              {plansData[activeTab].card2.ribbon}
+            </div>
+
             <div>
               {/* Badge & Plan Name */}
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-4 pt-1">
                 <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-blue-50 text-[#077dd3] border border-blue-200">
-                  SEMI-ANNUAL PACKAGE
+                  {plansData[activeTab].card2.badgeLeft}
+                </span>
+                <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200">
+                  {plansData[activeTab].card2.badgeRight}
                 </span>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
-                6-Month Package
+                6-Month Plan
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 font-sans mt-1">
-                Full 6-month subscription for {tabsData[activeTab].label.toLowerCase()} operations.
+                Start with a 3-month free trial, then continue on a 6-month subscription.
               </p>
 
               {/* Price Display */}
               <div className="mt-6 mb-6 pb-6 border-b border-slate-100">
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#077dd3] font-heading">
-                    30,000
+                    {plansData[activeTab].card2.price}
                   </span>
                   <span className="text-base font-bold text-[#077dd3] font-heading">
                     PKR
@@ -247,8 +415,20 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
                     / 6 months
                   </span>
                 </div>
+                <div className="flex items-center gap-2 mt-1.5">
+                  <span className="text-xs text-red-500 line-through font-mono font-bold">
+                    {plansData[activeTab].card2.original} PKR
+                  </span>
+                  <span className="text-xs font-bold text-[#077dd3] font-mono bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+                    {plansData[activeTab].card2.discount}
+                  </span>
+                </div>
+                <div className="text-xs text-blue-700 font-mono font-semibold mt-1 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+                  <span>{plansData[activeTab].card2.subtext}</span>
+                </div>
                 <div className="text-xs text-slate-500 font-mono mt-1">
-                  Equivalent to 5,000 PKR / month
+                  Equivalent to {plansData[activeTab].card2.price === "72,000" ? "12,000" : "5,000"} PKR / month
                 </div>
               </div>
 
@@ -266,28 +446,22 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
                     <span>{feat}</span>
                   </div>
                 ))}
-                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#077dd3] font-sans font-bold pt-1">
-                  <div className="w-5 h-5 rounded-full bg-[#077dd3] text-white flex items-center justify-center shrink-0">
-                    <Zap className="w-3.5 h-3.5 text-white" />
-                  </div>
-                  <span>Free Data Migration & System Onboarding</span>
-                </div>
               </div>
             </div>
 
             {/* CTA Button */}
             <div className="pt-4">
               <button
-                onClick={onOpenDemo}
+                onClick={() => onOpenDemo?.(`${tabsData[activeTab].label} - 6-Month Plan (${plansData[activeTab].card2.price} PKR)`)}
                 className="w-full py-3.5 sm:py-4 px-6 bg-[#077dd3] hover:bg-[#1a3366] text-white text-xs sm:text-sm font-bold rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-95"
               >
-                <span>Contact Us to Subscribe</span>
+                <span>{plansData[activeTab].card2.buttonText || "Contact Us to Subscribe"}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </motion.div>
 
-          {/* Card 3: 1-Year (12-Month) Package (Save 10,000 PKR Offer) */}
+          {/* Card 3: 1-Year (12-Month) Plan */}
           <motion.div
             key={`card3-${activeTab}`}
             initial={{ opacity: 0, y: 15 }}
@@ -298,32 +472,32 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
             {/* 1-Year Offer Ribbon Badge */}
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[11px] font-extrabold px-4 py-1 rounded-full shadow-md flex items-center gap-1.5 whitespace-nowrap tracking-wide border border-emerald-400/40">
               <Sparkles className="w-3.5 h-3.5 fill-white" />
-              SAVE 10,000 PKR • MAXIMUM SAVINGS
+              {plansData[activeTab].card3.ribbon}
             </div>
 
             <div>
               {/* Badge & Plan Name */}
               <div className="flex items-center justify-between mb-4 pt-1">
                 <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
-                  ANNUAL PACKAGE
+                  {plansData[activeTab].card3.badgeLeft}
                 </span>
                 <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-                  2 Months FREE
+                  {plansData[activeTab].card3.badgeRight}
                 </span>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
-                1-Year Package
+                1-Year Plan
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 font-sans mt-1">
-                Pay for 10 months and get 2 full months completely FREE.
+                Start with a 3-month free trial, then continue on an annual subscription.
               </p>
 
               {/* Price Display */}
               <div className="mt-6 mb-6 pb-6 border-b border-slate-100">
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-700 font-heading">
-                    50,000
+                    {plansData[activeTab].card3.price}
                   </span>
                   <span className="text-base font-bold text-emerald-800 font-heading">
                     PKR
@@ -333,15 +507,19 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
                   </span>
                 </div>
                 <div className="flex items-center gap-2 mt-1.5">
-                  <span className="text-xs text-slate-400 line-through font-mono font-semibold">
-                    60,000 PKR
+                  <span className="text-xs text-red-500 line-through font-mono font-bold">
+                    {plansData[activeTab].card3.original} PKR
                   </span>
                   <span className="text-xs font-bold text-emerald-700 font-mono bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                    Instant 10,000 PKR Discount Applied
+                    {plansData[activeTab].card3.discount}
                   </span>
                 </div>
+                <div className="text-xs text-emerald-700 font-mono font-semibold mt-1 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span>{plansData[activeTab].card3.subtext}</span>
+                </div>
                 <div className="text-xs text-slate-500 font-mono mt-1">
-                  Equivalent to ~4,166 PKR / month
+                  Equivalent to {plansData[activeTab].card3.price === "120,000" ? "10,000" : "~4,166"} PKR / month
                 </div>
               </div>
 
@@ -371,10 +549,10 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
             {/* CTA Button */}
             <div className="pt-4">
               <button
-                onClick={onOpenDemo}
+                onClick={() => onOpenDemo?.(`${tabsData[activeTab].label} - 1-Year Plan (${plansData[activeTab].card3.price} PKR)`)}
                 className="w-full py-3.5 sm:py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-2xl shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-95 border border-emerald-400/40"
               >
-                <span>Contact Us for 10,000 PKR Discount</span>
+                <span>{plansData[activeTab].card3.buttonText || "Contact Us to Subscribe"}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -384,10 +562,10 @@ export default function Pricing({ onOpenDemo, hideHeader = false }: PricingProps
         {/* Purchasing Process Notice Box */}
         <div className="mt-12 max-w-3xl mx-auto p-6 sm:p-7 bg-slate-50 border border-slate-200/90 rounded-3xl text-center space-y-3 shadow-xs">
           <div className="text-xs sm:text-sm font-extrabold text-[#077dd3] font-heading tracking-wide uppercase">
-            HOW TO SUBSCRIBE
+            HOW TO SUBSCRIBE &amp; GET STARTED
           </div>
           <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-            Subscriptions and setup are configured directly by our official hospital onboarding team. Click any button above to contact us or request a live demo. Our specialist will contact you within 1 hour to set up your hospital workspace, configure doctor ledgers, and train your staff.
+            Select the pricing plan that fits your hospital&apos;s scale above and click its button. Fill out the subscription form with your facility details, license info, and account credentials, and click activate. Once activated, you will be instantly redirected to the login page of the official PAKHIMS application to access and configure your workspace modules immediately.
           </p>
         </div>
       </div>

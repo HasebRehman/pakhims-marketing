@@ -66,7 +66,7 @@ export default function PricingBanner({ onOpenDemo }: PricingBannerProps) {
 
               {/* Subtitle */}
               <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-sans max-w-xl">
-                Get the complete hospital management system for only 5,000 PKR/mo, or choose only the specific modules your hospital needs. <strong className="text-white">Save 5,000 PKR instantly</strong> on our 6-Month Package!
+                Get the complete hospital management system for only 6,000 PKR/mo, or choose only the specific modules your hospital needs. <strong className="text-white">Save 6,000 PKR instantly</strong> on our 6-Month Plan!
               </p>
 
               {/* Quick Perks Row */}
@@ -77,7 +77,7 @@ export default function PricingBanner({ onOpenDemo }: PricingBannerProps) {
                 </div>
                 <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-xl">
                   <Tag className="w-4 h-4 text-red-400 shrink-0" />
-                  <span>5,000 PKR Discount on 6 Months</span>
+                  <span>6,000 PKR Discount on 6 Months</span>
                 </div>
               </div>
 

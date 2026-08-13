@@ -10,23 +10,34 @@ import { HelpCircle, ChevronDown, CheckCircle2 } from "lucide-react";
 
 export default function PricingPage() {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
-  const handleOpenDemo = () => setDemoModalOpen(true);
-  const handleCloseDemo = () => setDemoModalOpen(false);
+  const handleOpenDemo = (planDetails?: string) => {
+    if (typeof planDetails === "string") {
+      setSelectedPlan(planDetails);
+    } else {
+      setSelectedPlan(null);
+    }
+    setDemoModalOpen(true);
+  };
+  const handleCloseDemo = () => {
+    setDemoModalOpen(false);
+    setSelectedPlan(null);
+  };
 
   const faqs = [
     {
-      q: "How does the 5,000 PKR / month pricing structure work?",
-      a: "PAKHIMS offers a transparent subscription of 5,000 PKR / month. There are zero hidden setup fees, zero per-user charges, and zero per-patient costs. Every subscription includes full access to OPD, IPD, Patient History (MRN), Doctor Accounts, and Billing modules.",
+      q: "How does the monthly pricing structure work?",
+      a: "PAKHIMS offers a transparent subscription starting at 6,000 PKR/month for individual modules (Hospital Care, Labs, or Blood Bank) and 15,000 PKR/month for our Full Access suite, both after a 3-month free trial. There are zero hidden setup fees, zero per-user charges, and zero per-patient costs.",
     },
     {
-      q: "What paid subscription packages do you offer?",
-      a: "We offer two paid subscription plans: a 6-Month Semi-Annual Package at 30,000 PKR (equivalent to 5,000 PKR/month) and a 1-Year Annual Package at 50,000 PKR (which saves you 10,000 PKR, equivalent to 4,166 PKR/month). Both packages include complete system setup, doctor share ledger configuration, and full staff onboarding.",
+      q: "What subscription packages do you offer?",
+      a: "We offer plans for individual modules (Hospital Care, Labs, or Blood Bank) as well as a Full Access suite. For individual modules, rates are: 1-Month Plan at 6,000 PKR/month, 6-Month Plan at 30,000 PKR (saves 17%, original 36,000 PKR), and 1-Year Plan at 50,000 PKR (saves 31%, original 72,000 PKR). For the Full Access suite (all modules combined), rates are: 1-Month Plan at 15,000 PKR/month, 6-Month Plan at 72,000 PKR (saves 20%, original 90,000 PKR), and 1-Year Plan at 120,000 PKR (saves 33%, original 180,000 PKR). All plans include a 3-Month Free Trial.",
     },
     {
       q: "Are there any hidden installation, database, or server maintenance fees?",
@@ -46,11 +57,11 @@ export default function PricingPage() {
     },
     {
       q: "How do we purchase a package or subscribe to PAKHIMS?",
-      a: "Subscriptions are configured directly by our official hospital onboarding team to ensure proper system setup. Click any 'Contact Us to Subscribe' or 'Request Free Demo' button on this page. Our specialist will contact you within 1 hour to set up your hospital workspace.",
+      a: "You can purchase any plan directly from our pricing page. Simply select your desired package (Hospital Care, Labs, Blood Bank, or Full Access) and click its activation button, fill out the signup form with your hospital details and credentials, and click activate. Upon successful activation, you will be instantly redirected to the login page of the official PAKHIMS app (https://app.pakhims.com/login) to access your workspace.",
     },
     {
       q: "How fast can our hospital deploy PAKHIMS?",
-      a: "Deployment is fast and seamless! Our technical team configures your hospital profile, ward/room categories, doctor share rates, and trains your staff within 24 to 48 hours.",
+      a: "Deployment is instant! As soon as you activate your plan and complete the signup form, your hospital workspace and database are instantly provisioned, and you are redirected to the login page to configure your categories, layouts, and doctor shares immediately.",
     },
   ];
 
@@ -97,7 +108,7 @@ export default function PricingPage() {
               <span className="text-slate-900">& Packages.</span>
             </h1>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-sans mx-auto">
-              Straightforward pricing for Pakistani hospitals. Includes a <strong>1-Month Free Trial</strong> and custom module options — pay only for the specific modules you need!
+              Straightforward pricing for Pakistani hospitals. Includes a <strong>3-Month Free Trial</strong> and custom module options — pay only for the specific modules you need!
             </p>
           </div>
         </div>
@@ -196,7 +207,7 @@ export default function PricingPage() {
       <Footer onOpenDemo={handleOpenDemo} />
 
       {/* Interactive Lead Capture Modal */}
-      <DemoModal isOpen={demoModalOpen} onClose={handleCloseDemo} />
+      <DemoModal isOpen={demoModalOpen} onClose={handleCloseDemo} pricingPlan={selectedPlan} />
     </main>
   );
 }
