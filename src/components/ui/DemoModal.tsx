@@ -522,7 +522,7 @@ export default function DemoModal({ isOpen, onClose, pricingPlan = null }: DemoM
                       <button type="submit" disabled={loading} className="w-full py-3.5 px-6 bg-[#CE2433] hover:bg-[#E32D3D] text-white font-bold rounded-xl shadow-lg shadow-red-600/25 flex items-center justify-center gap-2 transition-all group disabled:opacity-75">
                         {loading
                           ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                          : <><span>Activate Subscription Plan</span><ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></>}
+                          : <><span>Create Hospital/Clinic Account</span><ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></>}
                       </button>
                       <p className="text-center text-xs text-slate-400 mt-2">🔒 Secure connection. Your credentials are fully protected.</p>
                     </div>
